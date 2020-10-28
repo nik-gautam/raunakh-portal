@@ -52,7 +52,7 @@ router.post("/payment", async (req, res, next) => {
   if(process.env.NODE_ENV == "production") {
     callbackUri = req.protocol + '://' + req.get('host') + "/thanks";
   }
-
+ 
   console.log(callbackUri)
 
   var options = {
