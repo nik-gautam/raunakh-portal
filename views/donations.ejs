@@ -1,3 +1,20 @@
-<h1>donation table here</h1>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations</title>
+</head>
+<body>
+    <% donators.forEach(function(donator){ %>
+        <%= donator.email %> <br>
+        <%= donator.contact %> <br>
+        <%= donator.method %> <br>
+        <%= donator.amount %> <br>
+        <%= donator.currency %> <br>
+        <%= donator.order_id %> <br>
+        <%= donator.date_created %>
+    <% }); %>
 <a href="/logout">logout</a>
+</body>
+</html>

@@ -19,7 +19,13 @@ router.get('/', function(req, res, next) {
 
 router.get("/donations", (req, res) => {
   if(req.isAuthenticated()) {
-    res.render("donations");
+    Donator.find({}, (err, donators)=>{
+      if(err){
+        console.log(err);
+      }else{
+        res.render("donations", {donators: donators});
+      }
+    });   
   } else {
     res.status(403).send("Access denied")
   }
