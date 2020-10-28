@@ -1,6 +1,12 @@
+html{
+  padding:0;
+  margin:0;
+}
 body {
   padding: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 a {
@@ -165,3 +171,59 @@ body .progress-bg div {
     to { width: 50%; }
 }
 /* PROGRESS BAR END */
+
+.center{
+  margin: auto;
+  /* transform: translate(-50%,-50%); */
+  color: white;
+}
+#container{
+  max-width:750px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: ridge;
+  border-radius: 1000;
+}
+.box{
+  padding: 2rem;
+  margin: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  text-align: center;
+}
+#if-expired{
+  display:none;
+  font-size: 1.5rem;
+}
+.timer{
+  font-size: 4rem;
+}
+.caption{
+  text-align: center;
+  
+  font-size:1.2rem;
+}
+.background{
+  background-color: #282C34;
+  height: 500px;
+  color: #fff;
+  width:100%;
+}
+#heading{
+  font-size: 70px;
+  text-align: center;
+
+}
+.about{
+  font-size: 6rem;
+  border-right: 30px solid #F39C12;
+  width: fit-content;
+}
+
+
+
+
+
+
