@@ -3,6 +3,7 @@ var router = express.Router();
 var server = require('http').createServer(express());
 var io = require('socket.io')(server); 
 var Razorpay = require("razorpay");
+var Donator = require('../models/donations');
 
 let rzr = new Razorpay({
   key_id: process.env.KEY_ID,
@@ -66,6 +67,31 @@ router.post("/thanks", async (req, res, next) => {
       });
     }
 
+    var email = payment.email;
+    var contact = payment.contact;
+    var method = payment.method;
+    var amount = payment.amount/100;
+    var currency = payment.currency;
+    var order_id = payment.order_id;
+    var date_created = payment.created_at;
+
+    var newDonator = {
+      email: email,
+      contact: contact,
+      method: method,
+      amount: amount,
+      currency: currency,
+      order_id: order_id,
+      date_created: date_created
+    };
+
+    Donator.create(newDonator, (err, newDonatorCreated)=>{
+      if(err){
+        console.log(err);
+      }else{
+        console.log("added to db successfully");
+      }
+    })
     // payment will look like this
     // {
     //   "id": "pay_FuEeZ4AxdXB83e",
