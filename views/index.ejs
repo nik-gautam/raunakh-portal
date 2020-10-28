@@ -137,6 +137,11 @@
           <input type="text" name="amount" placeholder="enter donation amount" />
           <button type="submit" class="btn btn-danger btn-lg px-4 py-2">DONATE <i class="fas fa-hand-holding-heart"></i></button>
         </form>
+        <div class="text-center"> 
+          <% donators.forEach(function(donator){ %>
+            <h4><%= donator.email %> donated <%= donator.currency %> <%= donator.amount %> </h4>
+          <% }); %>
+        </div>
       </div>
       
     </div>
