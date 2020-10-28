@@ -14,7 +14,14 @@ let rzr = new Razorpay({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { });
+  Donator.find({}, (err, donators)=>{
+    if(err){
+      console.log(err);
+    }else{
+      res.render('index', {donators: donators });
+    }
+  }).sort({_id:-1}).limit(3);
+  
 });
 
 router.get("/donations", (req, res) => {
