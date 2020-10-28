@@ -152,9 +152,8 @@ router.post("/thanks", async (req, res, next) => {
     //   }
 
     res.render("thanks", {
-      email: payment.email,
-      amount: payment.amount,
-      paymentId: payment.id,
+      currency: currency,
+      amount: amount,
     });
   });
 });
