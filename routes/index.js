@@ -47,6 +47,14 @@ router.get("/logout", (req, res) => {
 router.post("/payment", async (req, res, next) => {
   console.log(req.body.amount);
 
+  let callbackUri = "http://localhost:3000/thanks";
+
+  if(process.env.NODE_ENV == "production") {
+    callbackUri = req.protocol + '://' + req.get('host') + "/thanks";
+  }
+
+  console.log(callbackUri)
+
   var options = {
     amount: parseInt(req.body.amount) * 100,
     currency: "INR",
@@ -55,7 +63,7 @@ router.post("/payment", async (req, res, next) => {
   rzr.orders.create(options, function (err, order) {
     if (!err) {
       console.log(order);
-      res.render("payment", { order_id: order.id, amount: order.amount });
+      res.render("payment", { order_id: order.id, amount: order.amount, callbackUri });
     } else {
       res.render("error", { error: err, message: "error aagaya bhai!!" });
     }
