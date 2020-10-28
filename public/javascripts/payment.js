@@ -1,15 +1,15 @@
 let order_id = document.getElementById("order_id").value;
 let amount = document.getElementById("amount").value;
+let callbackUri = document.getElementById("callbackUri").value;
 
-console.log(order_id + " " + amount);
+console.log(order_id + " " + amount + " " + callbackUri);
 
 var options = {
   key: "rzp_test_nPAgDRmRtPGa4i",
   amount: amount,
   currency: "INR",
   order_id: order_id,
-  callback_url: "http://localhost:3000/thanks",
-  //callback_url: "https://raunakh-portal.herokuapp.com/thanks"
+  callback_url: callbackUri,
 };
 
 let rzr = new Razorpay(options);
