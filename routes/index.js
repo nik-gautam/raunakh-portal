@@ -32,7 +32,7 @@ router.get("/donations", (req, res) => {
       }else{
         res.render("donations", {donators: donators});
       }
-    });   
+    }).sort({_id:-1});   
   } else {
     res.status(403).send("Access denied")
   }
@@ -94,7 +94,9 @@ router.post("/thanks", async (req, res, next) => {
     var amount = payment.amount/100;
     var currency = payment.currency;
     var order_id = payment.order_id;
-    var date_created = payment.created_at;
+    var date_created = new Date(); 
+
+    //take date from when the payment is success and redirected to thanks page.. - nik 
 
     var newDonator = {
       email: email,
