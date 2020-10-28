@@ -6,7 +6,10 @@
     <title>Donations</title>
 </head>
 <body>
+
+    <!-- table heading -->
     <% donators.forEach(function(donator){ %>
+        <!-- table row -->
         <%= donator.email %> <br>
         <%= donator.contact %> <br>
         <%= donator.method %> <br>
@@ -14,7 +17,9 @@
         <%= donator.currency %> <br>
         <%= donator.order_id %> <br>
         <%= donator.date_created %>
+        <!-- table row end -->
     <% }); %>
+    <!-- table end -->
 <a href="/logout">logout</a>
 </body>
 </html>
