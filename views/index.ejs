@@ -133,7 +133,10 @@
           <h4 class="col-6">$50,000&nbsp;raised </h4>
           <h4 class="col-6">Goal: $100,000</h4>
         </div>
-        <button type="button" class="btn btn-danger btn-lg px-4 py-2">DONATE <i class="fas fa-hand-holding-heart"></i></button>
+        <form action="/payment" method="post">
+          <input type="text" name="amount" placeholder="enter donation amount" />
+          <button type="submit" class="btn btn-danger btn-lg px-4 py-2">DONATE <i class="fas fa-hand-holding-heart"></i></button>
+        </form>
       </div>
       
     </div>

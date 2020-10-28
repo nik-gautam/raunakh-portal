@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continue to pay me</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  </head>
+  <body>
+    <button id="razorpay-btn">Seriously.. PAY ME!!</button>
+
+    <h2>Order ID :- <%= order_id %></h2>
+    <h2>Order amount :-Rs. <%= amount/100 %></h2>
+
+    <input
+      type="hidden"
+      id="order_id"
+      name="order_id"
+      value="<%= order_id %>"
+    />
+    <input type="hidden" id="amount" name="amount" value="<%= amount %>" />
+  </body>
+  <script src="/javascripts/payment.js"></script>
+</html>
