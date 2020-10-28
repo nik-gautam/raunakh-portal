@@ -8,8 +8,8 @@ var options = {
   amount: amount,
   currency: "INR",
   order_id: order_id,
-  callback_url: "http://localhost:3000/thanks",
-  //callback_url: "https://raunakh-portal.herokuapp.com/thanks"
+  //callback_url: "http://localhost:3000/thanks",
+  callback_url: "https://raunakh-portal.herokuapp.com/thanks"
 };
 
 let rzr = new Razorpay(options);
