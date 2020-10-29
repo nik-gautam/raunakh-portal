@@ -15,8 +15,8 @@ const finalDate = new Date("November 13,2020 00:12:08").getTime();
     let minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
     let seconds = Math.floor(diff % (1000*60)/1000);
 
-    days <= 9 ? days= `00${days}`:
-    days <= 99 ? days= `0${days}`:days;
+    days <= 9 ? days= `0${days}`:
+    days <= 99 ? days= `${days}`:days;
 
     hours <= 9 ? hours = `0${hours}` : hours;
     minutes <=9 ? minutes = `0${minutes}` : minutes;
