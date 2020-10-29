@@ -27,17 +27,24 @@
         </form>
       </div>
 
-      
-      <form action="/payment" method="post">
-        
-      </form>
-      <div class="text-center"> 
-        <% donators.forEach(function(donator){ %>
-          <h4><%= donator.email %> donated <%= donator.currency %> <%= donator.amount %> </h4>
-        <% }); %>
+     
+      <div class="marquee-box">
+        <div class="marquee">
+          <p><% donators.forEach(function(donator){ %>
+            <span class="mx-1"><%= donator.email %> donated <%= donator.currency %> <%= donator.amount %> </span>
+          <% }); %></p>
+        </div>
       </div>
+      
+
+      
+      <!-- <div class="text-center"> 
+        <% donators.forEach(function(donator){ %>
+          <span class="mx-3"><%= donator.email %> donated <%= donator.currency %> <%= donator.amount %> </span>
+        <% }); %>
+      </div> -->
     </div>
-    
+
   </div>
   
 </div>
