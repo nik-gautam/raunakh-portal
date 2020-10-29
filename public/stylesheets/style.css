@@ -60,12 +60,16 @@ a{
   color: #ff5722;
 }
 
-.donation-bar hr {
+.donation-bar hr, .aboutus hr {
   border: 0;
   height: 3px;
   width: 50%;
   background: #b2ebf2;
   background-image: linear-gradient(to right, #333, #b2ebf2, #333);
+}
+.aboutus hr{
+  background: #b2ebf2;
+  background-image: linear-gradient(to right, #ddd, #00bcd4, #ddd);
 }
 
 .donation-amount{
@@ -159,15 +163,15 @@ a{
   
 }
 .aboutus{
-  background-image: url('https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  height: 700px;
+  /* background-image: url('https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); */
+  height: 500px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   
 }
 .about__content{
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 400;
   padding:15px;
   
   
@@ -238,7 +242,12 @@ canvas {
 }
 
 
-
+.heading{
+  font-family: 'Taviraj', serif;
+  font-size: 3rem;
+  text-align: center!important;
+  margin: auto;
+}
 
 
 
