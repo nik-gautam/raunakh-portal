@@ -167,6 +167,7 @@ a{
   background-repeat: no-repeat;
   background-attachment: fixed;
   
+  
 }
 .about__content{
   font-size: 1.4rem;
@@ -180,6 +181,39 @@ a{
 .show{
   z-index:0;
 }
+
+
+
+
+@media (min-width :500px){
+  .aboutus{
+      height:1100px
+  }
+  .about__content{
+    font-size: 2rem;
+  }
+}
+@media (min-width :700px){
+  .aboutus{
+     
+      height:900px;
+  }
+  .about__content{
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width : 1000px){
+  .aboutus{
+      
+  height:800px;
+  }
+  .about__content{
+    font-size: 1.6rem;
+  }
+}
+
+
 
 
 
