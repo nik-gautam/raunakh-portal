@@ -121,16 +121,16 @@ a:hover{
 }
 #container{
   max-width:750px;
-  height: 200px;
+  height: 170px;
   display: flex;
   justify-content: center;
-  align-items: center;
   border-style: ridge;
   border-radius: 1000;
+  background-color: rgba(0, 0, 0, 0.336);
 }
+
 .box{
-  padding: 2rem;
-  margin: 1rem;
+  padding: 1.8rem;
   background: transparent;
   border-radius: 5px;
   text-align: center;
@@ -142,13 +142,27 @@ a:hover{
 .timer{
   font-size: 4rem;
 }
+
 .caption{
   text-align: center;
   
   font-size:1.2rem;
 }
+.particle-section {
+  font-size: 3rem;
+  position: relative;
+  height: 100vh;
+}
+.particle-section p{
+  margin: 0;
+  padding: 10px 30px 0;
+  text-transform: uppercase;
+}
 .background{
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 500px;
   color: #fff;
   width:100%;
@@ -238,7 +252,6 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  z-index:-1;
   position: relative;
 }
 
