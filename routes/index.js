@@ -56,7 +56,7 @@ router.post("/payment", async (req, res, next) => {
   console.log(callbackUri)
 
   var options = {
-    amount: parseInt(req.body.amount) * 100,
+    amount: parseFloat(req.body.amount) * 100,
     currency: "INR",
   };
 
