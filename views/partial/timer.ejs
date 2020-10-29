@@ -1,36 +1,33 @@
-<!-- particles.js container -->
-<div id="particles-js">
-  <div class="background">
-    <div class="show">
-      <div id="heading" class="py-5">The main event starts in</div>
-      <div id="container" class="center">
-        <div id="days">
-          <p class="timer box">00</p>
-          <p class="caption">Days</p>
+
+<section class="particle-section" id="particles-js">
+  <div class="row">
+    <div class="background col-12">
+      <div class="show text-center">
+        <div id="heading h3" class="py-5">The main event starts in</div>
+        <div id="container" class="center container row text-center" style="font-size: small;">
+          <div id="days" class="col-md-3 col-6">
+            <p class="timer box particle-text">00</p>
+            <p class="caption">Days</p>
+          </div>
+          <div id="hours" class="col-md-3 col-6">
+            <p class="timer box particle-text">00</p>
+            <p class="caption">Hour</p>
+          </div>
+          <div id="minutes" class="col-md-3 col-6">
+            <p class="timer box particle-text">00</p>
+            <p class="caption">Minutes</p>
+          </div>
+          <div id="seconds" class="col-md-3 col-6">
+            <p class="timer box particle-text">00</p>
+            <p class="caption">Seconds</p>
+          </div>
         </div>
-        <div id="hours">
-          <p class="timer box">00</p>
-          <p class="caption">Hour</p>
+        <div id="if-expired" class="box center">
+          <p>EVENT HAS BEEN STARTED</p>
         </div>
-        <div id="minutes">
-          <p class="timer box">00</p>
-          <p class="caption">Minutes</p>
-        </div>
-        <div id="seconds">
-          <p class="timer box">00</p>
-          <p class="caption">Seconds</p>
-        </div>
-      </div>
-      <div id="if-expired" class="box center">
-        <p>EVENT HAS BEEN STARTED</p>
       </div>
     </div>
   </div>
-  <div class="count-particles">
-    <span class="js-count-particles">--</span> particles
-  </div>
-</div>
+ 
+</section>
 
-<!-- stats - count particles -->
-
-<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
