@@ -37,7 +37,7 @@ a:hover{
 }
 .donation-bar{
   background: url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-  height: 1200px;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -51,7 +51,7 @@ a:hover{
 }
 .inner{
   background-color: rgba(0, 0, 0, 0.8);
-  height: 1200px;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -73,7 +73,7 @@ a:hover{
 }
 
 .donation-amount{
-  font-size: 8rem;
+  font-size: 4rem;
   color: #00bcd4;
   font-weight: 900;
 }
@@ -117,9 +117,9 @@ a:hover{
   color: white;
 }
 #container{
-  max-width:750px;
   height: 170px;
   display: flex;
+  width: fit-content;
   justify-content: center;
   border-style: ridge;
   border-radius: 1000;
@@ -145,6 +145,7 @@ a:hover{
   
   font-size:1.2rem;
 }
+
 .particle-section {
   font-size: 3rem;
   position: relative;
@@ -154,6 +155,34 @@ a:hover{
   margin: 0;
   padding: 10px 30px 0;
   text-transform: uppercase;
+}
+.particle-text{
+  font-size: 3em;
+}
+.caption{
+  font-size: 2.5em;
+}
+
+@media (max-width: 768px){
+  .particle-text{
+    font-size: 1.9em;
+  }
+  .caption{
+    font-size: 1.7em;
+  }
+  .particle-section p{
+    padding: 10px 10px 0;
+  }
+  #container{
+    height: 100%;
+    padding: 2em;
+  }
+  .donation-box{
+    width: 100%;
+  }
+  .donation-amount{
+    font-size: 3em;
+  }
 }
 .background{
   position: absolute;
