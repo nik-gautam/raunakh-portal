@@ -4,11 +4,10 @@ html{
 }
 body {
   padding: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
-  font-family: 'Montserrat', sans-serif;
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
+  font-family: 'Montserrat', sans-serif; */
 
 }
-
 a{
   color: #00bcd4;
 }
@@ -38,7 +37,7 @@ a{
 }
 .donation-bar{
   background: url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-  height: 800px;
+  height: 1200px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -46,9 +45,13 @@ a{
   color: white;
   text-align: center;
 }
+.donation-box h3{
+  color: #00bcd4;
+  font-weight: 900;
+}
 .inner{
   background-color: rgba(0, 0, 0, 0.8);
-  height: 800px;
+  height: 1200px;
   padding: 2rem;
 }
 
@@ -57,18 +60,50 @@ a{
   color: #ff5722;
 }
 
-.donation-bar hr {
+.donation-bar hr, .aboutus hr {
   border: 0;
   height: 3px;
   width: 50%;
   background: #b2ebf2;
   background-image: linear-gradient(to right, #333, #b2ebf2, #333);
 }
+.aboutus hr{
+  background: #b2ebf2;
+  background-image: linear-gradient(to right, #ddd, #00bcd4, #ddd);
+}
 
 .donation-amount{
-  font-size: 10rem;
+  font-size: 8rem;
   color: #00bcd4;
   font-weight: 900;
+}
+
+
+.donation-box{
+  color: black;
+  width: 30%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #d0e3e6;
+}
+
+.donation-box .row .col-5:hover{
+  background-color: #00bcd4;
+}
+.donation-options{
+  background-color: #d2ebee;
+  height: 40px;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #00bcd4;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.donation-box .row hr{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
 .footer-nav{
@@ -128,15 +163,14 @@ a{
   
 }
 .aboutus{
-  background-image: url('https://images.pexels.com/photos/172276/pexels-photo-172276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  height: 700px;
+  height: 500px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   
 }
 .about__content{
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 400;
   padding:15px;
   
   
@@ -207,7 +241,12 @@ canvas {
 }
 
 
-
+.heading{
+  font-family: 'Taviraj', serif;
+  font-size: 3rem;
+  text-align: center!important;
+  margin: auto;
+}
 
 
 
