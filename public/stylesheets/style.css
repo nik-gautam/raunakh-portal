@@ -22,10 +22,7 @@ a:hover{
   background-size: cover;
   width: 100%;
 }
-.carousel-inner{
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 600px;
-}
+
 .bg-warning{
   background-color: #dd2c00!important;
 }
@@ -163,7 +160,7 @@ a:hover{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 500px;
+  height: 100%;
   color: #fff;
   width:100%;
 }
@@ -180,7 +177,7 @@ a:hover{
   
 }
 .aboutus{
-  height: 500px;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   
@@ -203,28 +200,20 @@ a:hover{
 
 
 @media (min-width :500px){
-  .aboutus{
-      height:1100px
-  }
+ 
   .about__content{
     font-size: 2rem;
   }
 }
 @media (min-width :700px){
-  .aboutus{
-     
-      height:900px;
-  }
+  
   .about__content{
     font-size: 1.8rem;
   }
 }
 
 @media (min-width : 1000px) {
-  .aboutus{
-      
-  height:600px;
-  }
+  
   .about__content{
     font-size: 1.6rem;
   }
@@ -362,3 +351,68 @@ canvas {
   }
 }
 /* MARQUEE END */
+
+.testimonial h2{
+  color: #333;
+	text-align: center;
+	text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+.carousel-item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #db584e;
+}
+.carousel .carousel-control {
+	width: 30px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+	background: none;
+}
+.carousel-control i {
+  font-size: 60px;
+	line-height: 42px;
+  position: absolute;
+  display: inline-block;
+	color: #c5222dbb;
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #c5222d;
+}
