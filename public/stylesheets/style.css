@@ -250,3 +250,64 @@ canvas {
 
 
 
+/* MARQUEE */
+ .marquee-box{
+   width: 500px;
+   margin: auto;
+ }
+
+
+.marquee {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  color: #fff;
+}
+
+.marquee p {
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scroll-left 1s linear infinite;
+  -webkit-animation: scroll-left 1s linear infinite;
+  animation: scroll-left 10s linear infinite;
+}
+
+@-moz-keyframes scroll-left {
+  0% {
+      -moz-transform: translateX(100%);
+  }
+  100% {
+      -moz-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes scroll-left {
+  0% {
+      -webkit-transform: translateX(100%);
+  }
+  100% {
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+      -moz-transform: translateX(40%);
+      -webkit-transform: translateX(40%);
+      transform: translateX(40%);
+  }
+  100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+  }
+}
+/* MARQUEE END */
