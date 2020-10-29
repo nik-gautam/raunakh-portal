@@ -65,6 +65,11 @@ a {
   background-image: linear-gradient(to right, #333, #e08e1b, #333);
 }
 
+.donation-amount{
+  font-size: 10rem;
+  color: #F39C12;
+  font-weight: 900;
+}
 
 .center{
   margin: auto;
