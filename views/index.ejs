@@ -1,36 +1,188 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
-    <title>Raunakh Portal</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
-  </head>
-  <body>
-    <%- include ('partial/navbar') %>
-  
-    <%- include ('partial/contribution') %>
-
-  <%- include ('partial/about') %>
-
-  
-  <%- include ('partial/timer') %>
-  <%- include ('partial/testimonials') %>
-  <%- include ('partial/footer') %>
+<!doctype html>
+<html class="no-js" lang="zxx">
     
-  
-  <!-- <script src="/javascripts/main.js"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  <script src="/javascripts/particles.js"></script>
-  <script src="/javascripts/timer.js"></script>
-  </body> 
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fundee - NonProfit Charity HTML5 Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+
+    </head>
+    <body>
+
+      <%- include('includes/nav') %>
+          <%- include('includes/header') %>
+            <!-- features-title-start -->
+            <div class="features-title-area pt-130 pb-240" style="background-image:url(assets/img/bg/bg-09.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
+                            <div class="section-title white-title text-center">
+                                <span><i class="far fa-heart-circle"></i> our features</span>
+                                <h1>Join  with us to know our project for charity peoples</h1>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <!-- features-title-start -->
+
+            <!-- features-area-start -->
+            <div class="features-03-area pb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="features-03-wrapper text-center mb-30">
+                                <div class="features-04-icon">
+                                    <a href="about-us.html"><i class="flaticon-care"></i></a>
+                                 </div>
+                                 <div class="features-03-text">
+                                     <h3>Get Helps Child</h3>
+                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="features-03-wrapper text-center mb-30">
+                                <div class="features-04-icon">
+                                    <a href="about-us.html"><i class="flaticon-icon-829141"></i></a>
+                                 </div>
+                                 <div class="features-03-text">
+                                     <h3>Give Donation</h3>
+                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="features-03-wrapper text-center mb-30">
+                                <div class="features-04-icon">
+                                    <a href="about-us.html"><i class="flaticon-icon-182480"></i></a>
+                                 </div>
+                                 <div class="features-03-text">
+                                     <h3>Support Us</h3>
+                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- features-area-end -->
+
+            
+            <!-- cta-area-start -->
+            <div class="cta-area pt-120 pb-130" style="background-image:url(assets/img/bg/bg-02.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
+                            <div class="cta-02-wrapper text-center">
+                                <div class="cta-content">
+                                    <h1>We are always waiting for your helping hands, human service
+                                        is the greatest religion
+                                        </h1>
+                                    <div class="cta-button">
+                                        <a class="btn" href="causes-details.html">donate now <i class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- cta-area-end -->
+
+            
+            <%- include('includes/testimonials') %>
+            <%- include('includes/gallery') %>
+            <%- include('includes/societies') %>
+            <%- include('includes/contact') %>
+
+        </main>
+
+        <!-- footer-area-start -->
+        <footer>
+            <div class="footer-top-area black-soft-bg pt-50 pb-20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-2">
+                            <div class="footer-logo mb-30">
+                                <a href="index.html"><img src="assets/img/logo/logo-2.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="footer-icon mb-30">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="footer-img mb-30">
+                                <a href="#"><img src="assets/img/footer/01.png" alt=""></a>
+                                <a href="#"><img src="assets/img/footer/02.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-middle-area pt-80 pb-25" style="background-image:url(assets/img/bg/bg-05.jpg)">
+                <div class="container">
+                    <div class="footer-bottom-area  ">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="copyright text-center">
+                                    <p><i class="far fa-copyright"></i> 2020 <a href="#">Fundee.</a> All Rights Reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+
+
+
+		<!-- JS here -->
+        <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/ajax-form.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/jquery.scrollUp.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/jquery.knob.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
 </html>
