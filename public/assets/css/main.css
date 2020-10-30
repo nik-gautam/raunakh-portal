@@ -5744,3 +5744,13 @@ button.b-btn.btn-black {
   90% { content: " – Albert Schweitzer" }
   100% { content: '– Leo Tolstoy' }
 }
+
+.carousel-inner > .carousel-item >img{
+  min-height : 500px;
+  max-height : 700px;
+  width : 85%;
+  
+}
+.carousal__wrap{
+  z-index: 50;
+}
