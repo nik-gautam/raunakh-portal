@@ -2260,7 +2260,7 @@ label {
   padding: 60px 35px 55px; }
   .features-03-wrapper::before {
     position: absolute;
-    background: #ffc226;
+    background: #ffcd60;
     content: "";
     height: 5px;
     width: 120px;
@@ -2273,7 +2273,7 @@ label {
     width: 100%; }
 
 .features-04-icon {
-  border: 4px dashed #ffc226;
+  border: 4px dashed #ffcd60;
   padding: 10px;
   display: inline-block;
   border-radius: 50%; }
@@ -2281,7 +2281,7 @@ label {
     font-size: 20px;
     height: 120px;
     width: 120px;
-    background: #ffc226;
+    background: #ffcd60;
     display: inline-block;
     text-align: center;
     text-align: center;
