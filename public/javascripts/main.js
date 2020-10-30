@@ -15,3 +15,8 @@ $(document).ready(()=>{
     });
 
 });
+
+function contactInput(event){
+    console.log(event);
+}
+
