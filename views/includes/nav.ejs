@@ -1,29 +1,5 @@
-   <!-- header-start -->
-   <header class="header-transparent">
-    <div class="header-top-area header-02 d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-7 col-8 d-flex align-items-center">
-                    <div class="header-top-wrapper">
-                        <div class="header-info">
-                            <span class="mail-header"><i class="far fa-clock"></i> Sun - Friday, 08 am - 09 pm</span>
-                            <span><i class="far fa-envelope-open"></i> supportmedical@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-5 col-4">
-                    <div class="header-02-right">
-                        <div class="header-03-icon f-right d-none d-md-block">
-                            <a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a>
-                            <a class="google" href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a class="twit" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- header-start -->
+<header class="header-transparent">
     <div id="sticky-header" class="main-menu-area menu-3">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
@@ -89,6 +65,20 @@
                     <div class="mobile-menu"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="header-top-area header-02 d-none d-md-block">
+        <div class="container-fluid">
+            <!-- TODO: Add socket.io list of top 3... -->
+
+            <p class="marquee">
+                Last Donated by:-  
+
+                <% donators.forEach( function (donate) { %> 
+                   <span style="margin-left: 4em;"> <%= donate.email %> </span> 
+                <% }) %>     
+            </p>
+            
         </div>
     </div>
 </header>

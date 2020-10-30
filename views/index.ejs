@@ -22,12 +22,14 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/marquee.css">
+
 
 
     </head>
     <body>
 
-      <%- include('includes/nav') %>
+      <%- include('includes/nav', {donators: donators}) %>
           <%- include('includes/header') %>
           <%- include('includes/about') %>
 
@@ -70,7 +72,10 @@
 
 
 
+      
+        
 		<!-- JS here -->
+        <script src="/socket.io/socket.io.js"></script>
         <!-- <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script> -->
         <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
         <!-- <script src="assets/js/popper.min.js"></script> -->
@@ -90,7 +95,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <!-- <script src="assets/js/plugins.js"></script> -->
         <script src="assets/js/main.js"></script>
-
+        <script src="/javascripts/main.js"></script>
     </body>
 
 </html>

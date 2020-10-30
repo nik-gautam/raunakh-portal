@@ -1,0 +1,55 @@
+/* Make it a marquee */
+.marquee {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Make it move */
+@keyframes marquee {
+  0% {
+    text-indent: 30em;
+  }
+  100% {
+    text-indent: -105em;
+  }
+}
+
+/* Make it pretty */
+/* .microsoft {
+  padding-left: 1.5em;
+  position: relative;
+  font: 16px "Segoe UI", Tahoma, Helvetica, Sans-Serif;
+}
+
+.microsoft:before,
+.microsoft::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: 0.5em;
+  height: 0.5em;
+  box-shadow: 1em 1.25em 0 #f65314, 1.6em 1.25em 0 #7cbb00, 1em 1.85em 0 #00a1f1,
+    1.6em 1.85em 0 #ffbb00;
+}
+
+.microsoft:after,
+.microsoft::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2em;
+  height: 2em;
+  background-image: linear-gradient(left, white 70%, rgba(255, 255, 255, 0));
+} */
