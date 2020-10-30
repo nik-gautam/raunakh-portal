@@ -1783,7 +1783,7 @@ label {
       color: #ffc226; }
 
 .header-02 {
-  padding-left: 55px;
+  /* padding-left: ; */
   border-bottom: 2px solid #37576b;
   padding-bottom: 0;
   padding-top: 0; }
@@ -4889,7 +4889,7 @@ button.b-btn.btn-black {
       transition: .3s; }
 
 .slider-02-text {
-  margin-top: 269px; }
+  margin-top: 50px; }
   .slider-02-text h1 {
     color: #ffffff;
     font-size: 120px;

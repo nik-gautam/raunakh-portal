@@ -22,12 +22,14 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/marquee.css">
+
 
 
     </head>
     <body>
 
-      <%- include('includes/nav') %>
+      <%- include('includes/nav', {donators: donators}) %>
           <%- include('includes/header') %>
             <!-- features-title-start -->
             <div class="features-title-area pt-130 pb-240" style="background-image:url(assets/img/bg/bg-09.jpg)">
@@ -143,7 +145,8 @@
 
 
 
-		<!-- JS here -->
+        <!-- JS here -->
+        <script src="/socket.io/socket.io.js"></script>
         <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
@@ -163,7 +166,7 @@
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
-
+        <script src="/javascripts/main.js"></script>
     </body>
 
 </html>
