@@ -2579,7 +2579,6 @@ label {
 .arrow-style .slick-dots {
   text-align: center;
   bottom: -85px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -3401,7 +3400,6 @@ label {
 .testimonia-item-active .slick-dots {
   text-align: center;
   bottom: -85px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -3517,7 +3515,6 @@ label {
 .testimonial-active .slick-dots {
   text-align: center;
   bottom: -54px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -4789,7 +4786,9 @@ button.b-btn.btn-black {
 /* 19. slider */
 .single-slider {
   background-size: cover;
-  background-position: center center; }
+  background-position: center center; 
+  
+}
 
 .slider-height {
   min-height: 950px; }
@@ -5489,7 +5488,13 @@ button.b-btn.btn-black {
   margin-bottom: -454px; }
 
 .team-img {
-  position: relative; }
+  position: relative;
+  height: 50%;
+  width: 50%;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+}
   .team-img img {
     width: 100%; }
   .team-img::before {
@@ -5765,6 +5770,9 @@ button.b-btn.btn-black {
   max-height : 900px;
   width : 85%;
   
+}
+.carousel-indicators{
+  z-index: 2;
 }
 .carousal__wrap{
   z-index: 50;
