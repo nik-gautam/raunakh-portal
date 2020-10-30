@@ -23,12 +23,15 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="volunteer-icon volunteer-email">
-                                                <input type="text" name="amount" placeholder="enter donation amount" />
+                                                <input type="text" id="donation-amount-input" name="amount" placeholder="enter donation amount" />
                                             </div>
+                                        </div>
+                                        <div class="col-md-12" id="error-donation">
+                                            
                                         </div>
                                         <div class="col-md-12">
                                             <div class="volunteer-button">
-                                                <button type="submit" class="btn" col><b>DONATE <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
+                                                <button type="submit" class="btn" id="button-donation" onclick="valiationDonation()" col><b>DONATE <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
                                             </div>
                                         </div>
                                     </div>
@@ -38,7 +41,6 @@
                     </div>
                 </div>
             </div>
+            
        </div>
        <!-- slider-end -->
-
-  

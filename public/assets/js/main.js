@@ -282,12 +282,7 @@ $('.testimonial-active').slick({
 
 
 
-	/* counter */
-	$('.counter').counterUp({
-		delay: 10,
-		time: 1000
-	});
-
+	
 	/* magnificPopup img view */
 	$('.popup-image').magnificPopup({
 		type: 'image',
@@ -433,3 +428,6 @@ function valiationContact(){
 
 	}
 }
+$('.carousel').carousel({
+	interval: 2000
+  })
