@@ -15,4 +15,8 @@ $(document).ready(()=>{
     });
 
 });
+<<<<<<< HEAD
 $('.carousel').carousel();
+=======
+
+>>>>>>> 52e3f89e94adba83a2a7058b0efc543d4c66032d
