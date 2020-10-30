@@ -297,18 +297,7 @@ $('.testimonial-active').slick({
 	});
 
 
-	// isotop
-	$('.grid').imagesLoaded( function() {
-		// init Isotope
-		var $grid = $('.grid').isotope({
-		  itemSelector: '.grid-item',
-		  percentPosition: true,
-		  masonry: {
-			// use outer width of grid-sizer for columnWidth
-			columnWidth: '.grid-item',
-		  }
-		});
-	});
+	
 
 	// filter items on button click
 	$('.portfolio-menu').on( 'click', 'button', function() {
