@@ -5,7 +5,7 @@ const finalDate = new Date("November 13,2020 00:12:08").getTime();
     const diff = finalDate - now;
     if(diff < 0){
         clearInterval(x);
-        document.getElementById('heading').style.display = "none";
+        document.getElementById('timer-heading').style.display = "none";
         document.getElementById('container').style.display = "none";
         document.getElementById('if-expired').style.display = "block";
         
