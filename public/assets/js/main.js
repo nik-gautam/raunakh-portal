@@ -433,3 +433,6 @@ function valiationContact(){
 
 	}
 }
+$('.carousel').carousel({
+	interval: 2000
+  })
