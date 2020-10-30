@@ -5701,3 +5701,30 @@ button.b-btn.btn-black {
   padding: 95px 346px 97px 66px;
   background-position: bottom right; }
 
+/* ************************************************************* */
+/* *************************** Custom ************************** */
+/* ************************************************************* */
+
+.changing-text-animation{
+  text-align: center;
+}
+.changing-text-animation span:before {
+  content: 'Be charitable and indulgent to everyone but yourself';
+  letter-spacing: 2px;
+  animation: switch 6s linear infinite;
+}
+.changing-text-animation h1 div:before{
+  content: '-joseph Joubert';
+  letter-spacing: 2px;
+  animation: switch2 6s linear infinite;
+}
+@keyframes switch {
+  0% { content: 'Be charitable and indulgent to everyone but yourself' }
+  50% { content: "Charity begins at home, but shouldn't end there." }
+  100% { content: "The sole meaning of life is to serve humanity." }
+}
+@keyframes switch2 {
+  0% { content: '-joseph Joubert' }
+  50% { content: '-a Scottish proverb' }
+  100% { content: '– Leo Tolstoy' }
+}
