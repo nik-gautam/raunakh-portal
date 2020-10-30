@@ -407,3 +407,29 @@ if (typeof ($.fn.knob) != 'undefined') {
   }
 
 	})(jQuery);
+
+let ContactValidity = true;
+
+
+
+function valiationContact(){
+	if(document.getElementById("contact-name").value.length===0 || document.getElementById("contact-email").value.length===0 || document.getElementById("contact-subject").value.length===0 ||document.getElementById("contact-message").value.length===0){
+		ContactValidity = false;
+	}
+	else
+		ContactValidity = true;
+
+	if(ContactValidity){
+		document.getElementById("button-contact").classList.remove("disabled");
+		document.getElementById("error-contact").innerHTML=``;
+	}
+	else {
+		document.getElementById("button-contact").classList.add("disabled");	
+		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
+		<div class="newsletter-form newsletter-02-form">
+				<p>All fields are neccessary</p>
+		</div>
+	</div>`;
+
+	}
+}
