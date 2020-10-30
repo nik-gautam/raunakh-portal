@@ -2579,7 +2579,6 @@ label {
 .arrow-style .slick-dots {
   text-align: center;
   bottom: -85px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -3401,7 +3400,6 @@ label {
 .testimonia-item-active .slick-dots {
   text-align: center;
   bottom: -85px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -3517,7 +3515,6 @@ label {
 .testimonial-active .slick-dots {
   text-align: center;
   bottom: -54px;
-  z-index: 99;
   position: absolute;
   left: 0;
   right: 0; }
@@ -5765,6 +5762,9 @@ button.b-btn.btn-black {
   max-height : 700px;
   width : 85%;
   
+}
+.carousel-indicators{
+  z-index: 2;
 }
 .carousal__wrap{
   z-index: 50;
