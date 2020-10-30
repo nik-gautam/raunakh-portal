@@ -3464,7 +3464,7 @@ label {
   box-shadow: 0px 7px 29.7px 0.3px rgba(234, 234, 234, 0.78); }
 
 .testimonial-active .slick-arrow {
-  background: #03b664;
+  background: #ffcd60;
   font-size: 16px;
   left: -53px;
   opacity: 0;
@@ -3489,7 +3489,7 @@ label {
 
 .testimonial-active .slick-arrow::before {
   content: "";
-  border: 2px solid #03b664;
+  border: 2px solid #ffcd60;
   position: absolute;
   height: 62px;
   width: 62px;
@@ -3535,7 +3535,7 @@ label {
   transition: .3s;
   padding: 0;
   border-radius: 50%;
-  background: #03b664;
+  background: #ffcd60;
   border: none;
   position: relative; }
 
