@@ -5745,6 +5745,20 @@ button.b-btn.btn-black {
   100% { content: '– Leo Tolstoy' }
 }
 
+
+
+.error-contact{
+  background-color: #f0a195;
+  border-radius: 5px;
+}
+.error-contact p{
+  padding: 1rem;
+  margin: 0;
+  font-weight: 500;
+  color: rgb(85, 76, 76);
+  font-size: 1.2rem;
+  font-style: italic;
+
 .carousel-inner > .carousel-item >img{
   min-height : 500px;
   max-height : 700px;

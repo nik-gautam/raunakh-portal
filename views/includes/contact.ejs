@@ -7,7 +7,7 @@
                     <div class="newsletters-wrapper mb-30">
                         <div class="newsletter-form newsletter-02-form">
                             <form action="#">
-                                <input placeholder="Enter your name" type="text">
+                                <input id="contact-name" placeholder="Enter your name" type="text" onblur="contactInput(event)">
                             </form>
                         </div>
                     </div>
@@ -16,7 +16,7 @@
                     <div class="newsletters-wrapper mb-30">
                         <div class="newsletter-form newsletter-02-form">
                             <form action="#">
-                                <input placeholder="Enter your email" type="email">
+                                <input id="contact-email" placeholder="Enter your email" type="email">
                             </form>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                     <div class="newsletters-wrapper mb-30">
                         <div class="newsletter-form newsletter-02-form">
                             <form action="#">
-                                <input placeholder="Subject" type="text">
+                                <input id="contact-subject" placeholder="Subject" type="text">
                             </form>
                         </div>
                     </div>
@@ -34,15 +34,18 @@
                     <div class="newsletters-wrapper mb-30">
                         <div class="newsletter-form newsletter-02-form">
                             <form action="#">
-                                <input placeholder="Message" type="text">
+                                <input id="contact-message" placeholder="Message" type="text">
                             </form>
                         </div>
                     </div>
+                </div>
+                <div class="col-xl-12 col-lg-12" id="error-contact" >
+                   
                 </div>
                 <div class="col-xl-3 col-lg-3">
                     <div class="newsletters-wrapper mb-30">
                         <div class="news-button">
-                            <button class="btn" type="submit">Subscribe now <i class="far fa-long-arrow-right"></i></button>
+                            <button class="btn disabled" onclick="valiationContact()" type="submit" id="button-contact">Subscribe now <i class="far fa-long-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
