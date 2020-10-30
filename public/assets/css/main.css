@@ -96,7 +96,9 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #748188; }
+  color: #748188;
+  scroll-behavior: smooth;
+ }
 
 .img, img {
   max-width: 100%;
@@ -5711,20 +5713,34 @@ button.b-btn.btn-black {
 .changing-text-animation span:before {
   content: 'Be charitable and indulgent to everyone but yourself';
   letter-spacing: 2px;
-  animation: switch 6s linear infinite;
+  animation: switch 40s linear infinite;
 }
 .changing-text-animation h1 div:before{
-  content: '-joseph Joubert';
+  content: '- Joseph Joubert';
   letter-spacing: 2px;
-  animation: switch2 6s linear infinite;
+  animation: switch2 40s linear infinite;
 }
 @keyframes switch {
   0% { content: 'Be charitable and indulgent to everyone but yourself' }
+  10% { content: "When we give cheerfully and accept gratefully, everyone is blessed." }
+  20% { content: "The simplest acts of kindness are by far more powerful than a thousand heads bowing in prayer." }
+  30% { content: "To ease another's heartache is to forget one's own." }
+  40% { content: "Every sunrise is an invitation for us to arise and brighten someone's day" }
   50% { content: "Charity begins at home, but shouldn't end there." }
+  60% {content: "Love and compassion are necessities, not luxuries. Without them, humanity cannot survive." }
+  70% { content: "The greatness of humanity is not in being human, but in being humane." }
+  90% { content: "The purpose of human life is to serve, and to show compassion and the will to help others." }
   100% { content: "The sole meaning of life is to serve humanity." }
 }
 @keyframes switch2 {
-  0% { content: '-joseph Joubert' }
-  50% { content: '-a Scottish proverb' }
+  0% { content: '- Joseph Joubert' }
+  10% { content: "- Maya Angelou" }
+  20% { content: "- MK Gandhi" }
+  30% { content: "- Abraham Lincoln " }
+  40% { content: "- Richelle E. Goodrich" }
+  50% { content: '- a Scottish proverb' }
+  60% { content: "Dalai Lama" }
+  70% { content: " – Mahatma Gandhi" }
+  90% { content: " – Albert Schweitzer" }
   100% { content: '– Leo Tolstoy' }
 }
