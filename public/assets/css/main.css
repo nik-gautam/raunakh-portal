@@ -4786,7 +4786,9 @@ button.b-btn.btn-black {
 /* 19. slider */
 .single-slider {
   background-size: cover;
-  background-position: center center; }
+  background-position: center center; 
+  
+}
 
 .slider-height {
   min-height: 950px; }
@@ -5486,7 +5488,13 @@ button.b-btn.btn-black {
   margin-bottom: -454px; }
 
 .team-img {
-  position: relative; }
+  position: relative;
+  height: 50%;
+  width: 50%;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+}
   .team-img img {
     width: 100%; }
   .team-img::before {
