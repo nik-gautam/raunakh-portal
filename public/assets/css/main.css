@@ -5351,85 +5351,6 @@ button.b-btn.btn-black {
   padding: 23px 74px 25px; }
 
 /* 23. team */
-.promotect-wrapper {
-  background-repeat: no-repeat;
-  padding: 70px 80px 75px 80px;
-  background-position: bottom; }
-
-.promotect-img img {
-  width: 100%; }
-
-.promotect-content {
-  background: #ffffff;
-  position: absolute;
-  right: 78px;
-  left: 78px;
-  padding: 34px 85px;
-  border-radius: 0 100px 100px 100px;
-  bottom: 30px; }
-
-.promotect-icon {
-  margin-right: 30px; }
-  .promotect-icon i {
-    font-size: 56px;
-    color: #d34848;
-    line-height: 1; }
-
-.promotect-info {
-  overflow: hidden; }
-  .promotect-info h3 {
-    font-size: 24px; }
-  .promotect-info p {
-    margin-bottom: 0; }
-
-.promotect-text {
-  margin-bottom: 42px; }
-  .promotect-text h1 {
-    font-size: 55px;
-    position: relative;
-    padding-bottom: 46px;
-    margin-bottom: 32px;
-    color: #ffffff; }
-    .promotect-text h1::before {
-      position: absolute;
-      content: "";
-      background: #ed6e59;
-      height: 2px;
-      width: 100%;
-      bottom: 0; }
-  .promotect-text p {
-    color: #ffffff;
-    margin-bottom: 0; }
-
-.promotect-link ul li {
-  padding-bottom: 41px; }
-  .promotect-link ul li:last-child {
-    padding-bottom: 0; }
-
-.promotect-2-info {
-  overflow: hidden; }
-  .promotect-2-info h3 {
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 13px; }
-  .promotect-2-info p {
-    margin-bottom: 0;
-    color: #ffffff; }
-
-.promotect-2-icon i {
-  font-size: 25px;
-  color: #d34848;
-  line-height: 65px;
-  width: 65px;
-  background: #ffffff;
-  text-align: center;
-  border-radius: 50%; }
-
-.promotect-bg-area {
-  height: 695px; }
-
-.promotect-area {
-  margin-bottom: -454px; }
 
 .team-img {
   position: relative;
@@ -5627,19 +5548,7 @@ button.b-btn.btn-black {
 .volunteer-button button.btn {
   padding: 26px 44px 26px 40px; }
 
-.promotect-bg-img {
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50%;
-  background-position: center center; }
 
-.promotect-02-wrapper {
-  background-repeat: no-repeat;
-  padding: 95px 346px 97px 66px;
-  background-position: bottom right; }
 
 /* ************************************************************* */
 /* *************************** Custom ************************** */
