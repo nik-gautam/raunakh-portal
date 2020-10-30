@@ -5758,6 +5758,7 @@ button.b-btn.btn-black {
   color: rgb(85, 76, 76);
   font-size: 1.2rem;
   font-style: italic;
+}
 
 .carousel-inner > .carousel-item >img{
   min-height : 500px;
