@@ -5636,21 +5636,37 @@ button.b-btn.btn-black {
 
 .timer-box{
   border: 2px solid #7e98ca;
-  border-radius: 50px;
   text-align: center;
   padding: 30px 10px;
   margin: 20px 0;
   color: black;
-  box-shadow: 5px 2px 2px #7e98ca;
+  box-shadow: -1px 5px 1.5px 1px #7e98ca;
 }
 .timer-box p:first-child{
-  font-size: 3rem;
+  font-size: 4rem;
   margin-top: 10px;
   color: white;
+  padding-bottom: 1rem;
   margin-bottom: 10px;
   font-weight: 600;
 }
 .timer-box p{
   color: #dfd9d9;
   margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+#timer-heading{
+  font-size: 46px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+@media (min-width: 992px) and (max-width: 1200px){
+  #timer-heading{
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (max-width: 576px){
+  #timer-heading{
+    font-size: 2rem;
+  }
 }
