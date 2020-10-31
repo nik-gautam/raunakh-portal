@@ -1,3 +1,4 @@
+
 let order_id = document.getElementById("order_id").value;
 let amount = document.getElementById("amount").value;
 let callbackUri = document.getElementById("callbackUri").value;
@@ -22,6 +23,11 @@ rzr.on("payment.failed", function (response) {
   alert(response.error.reason);
   alert(response.error.metadata);
 });
+
+// rzr.on("payment.authorized", function (response) {
+//   socket.emit("payment-success", { data: response.payload.payment.entity });
+// });
+
 document.getElementById("razorpay-btn").onclick = function (e) {
   rzr.open();
   e.preventDefault();

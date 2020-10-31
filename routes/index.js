@@ -116,9 +116,18 @@ router.post("/thanks", async (req, res, next) => {
 
     Donator.create(newDonator, (err, newDonatorCreated)=>{
       if(err){
-        console.log(err);
+        return res.render("error", {
+          error: err,
+          message: "error aagaya bhai!!",
+        });
       }else{
         console.log("added to db successfully");
+
+        res.render("thanks", {
+          donate: JSON.stringify(newDonatorCreated.toJSON()),
+          currency,
+          amount
+        });
       }
     })
     // payment will look like this
@@ -157,10 +166,7 @@ router.post("/thanks", async (req, res, next) => {
     //*   "created_at": 1603869351
     //   }
 
-    res.render("thanks", {
-      currency: currency,
-      amount: amount,
-    });
+    
   });
 });
 
