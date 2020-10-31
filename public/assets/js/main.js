@@ -215,3 +215,7 @@ function validationDonation(){
 $('.carousel').carousel({
 	interval: 2000
   })
+
+  function add_value(val){
+	  document.getElementById("donation-amount-input").value = val;
+  }
