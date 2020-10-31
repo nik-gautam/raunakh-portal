@@ -183,18 +183,43 @@ $('.testimonial-active').slick({
 	})(jQuery);
 
 
-function valiationContact(){
+function validationContact(){
+	var email = document.getElementById("contact-email").value;
+	var name = document.getElementById("contact-name").value;
+
+	if (!name.match(/^[a-zA-Z]+$/)) {
+
+		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
+			<div class="newsletter-form newsletter-02-form">
+					<p>Please enter correct name.</p>
+			</div>
+		</div>`;
+		return false;
+	
+	  }
+
+	if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
+			<div class="newsletter-form newsletter-02-form">
+					<p>Please enter a valid email address.</p>
+			</div>
+		</div>`;
+		return false;
+	
+	}
+
 	if(document.getElementById("contact-name").value.length===0 || document.getElementById("contact-email").value.length===0 || document.getElementById("contact-subject").value.length===0 ||document.getElementById("contact-message").value.length===0){
-		document.getElementById("button-contact").classList.add("disabled");	
 		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
 			<div class="newsletter-form newsletter-02-form">
 					<p>All fields are neccessary. Please enter all fields.</p>
 			</div>
-		</div>`;	
+		</div>`;
+		return false;	
 	}
 	else{
-		document.getElementById("button-contact").classList.remove("disabled");
 		document.getElementById("error-contact").innerHTML=``;
+		return true;
 	}
 }
 
