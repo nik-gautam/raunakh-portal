@@ -3073,15 +3073,26 @@ label {
     font-weight: 500; }
 
 .cta-button {
-  display: inline-block; }
+  display: inline-block; 
+  margin-top: 150px;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+@media (min-width: 767px) {
+  .cta-button {
+    margin-top: 20px;
+  }
+}
 
 .cta-info {
   display: inline-block; }
 
 .cta-content h1 {
+  width: 100%;
+  height: 5em;
   font-size: 55px;
   color: #ffffff;
-  padding: 0 22px;
+  /* padding: 0 ; */
   letter-spacing: -.3px;
   line-height: 1.1;
   margin-bottom: 53px; }
@@ -5558,15 +5569,22 @@ button.b-btn.btn-black {
   text-align: center;
 }
 .changing-text-animation span:before {
+  font-family: "Open Sans";
+  font-style: italic;
   content: 'Be charitable and indulgent to everyone but yourself';
   letter-spacing: 2px;
-  animation: switch 40s linear infinite;
+  animation: switch 100s linear infinite;
 }
 .changing-text-animation h1 div:before{
+  font-style: normal;
+  font-weight: bold;
+  /* margin-top: 1.5em; */
   content: '- Joseph Joubert';
   letter-spacing: 2px;
-  animation: switch2 40s linear infinite;
+  animation: switch2 100s linear infinite;
 }
+
+
 @keyframes switch {
   0% { content: 'Be charitable and indulgent to everyone but yourself' }
   10% { content: "When we give cheerfully and accept gratefully, everyone is blessed." }
@@ -5586,7 +5604,7 @@ button.b-btn.btn-black {
   30% { content: "- Abraham Lincoln " }
   40% { content: "- Richelle E. Goodrich" }
   50% { content: '- a Scottish proverb' }
-  60% { content: "Dalai Lama" }
+  60% { content: "- Dalai Lama" }
   70% { content: " – Mahatma Gandhi" }
   90% { content: " – Albert Schweitzer" }
   100% { content: '– Leo Tolstoy' }

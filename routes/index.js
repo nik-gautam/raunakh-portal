@@ -86,6 +86,17 @@ router.post("/thanks", async (req, res, next) => {
   //   razorpay_signature: '5b408cc7f17d666648cdf90955c7bcf2493f26324acc9e44b479361ed3937d7b'
   // }
 
+  rzr.orders.fetch(req.body.razorpay_order_id, (err, order) => {
+    if(err) {
+      return res.render("error", {
+        error: err,
+        message: "error aagaya bhai!!",
+      });
+    }
+
+    console.log(order);
+  })
+
   rzr.payments.fetch(req.body.razorpay_payment_id, (err, payment) => {
     if (err) {
       return res.render("error", {
@@ -93,6 +104,8 @@ router.post("/thanks", async (req, res, next) => {
         message: "error aagaya bhai!!",
       });
     }
+
+    console.log(payment);
 
     var email = payment.email;
     var contact = payment.contact;
