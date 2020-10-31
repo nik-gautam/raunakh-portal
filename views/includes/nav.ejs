@@ -1,94 +1,45 @@
-   <!-- header-start -->
-   <header class="header-transparent">
-    <div class="header-top-area header-02 d-none d-md-block">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-7 col-8 d-flex align-items-center">
-                    <div class="header-top-wrapper">
-                        <div class="header-info">
-                            <span class="mail-header"><i class="far fa-clock"></i> Sun - Friday, 08 am - 09 pm</span>
-                            <span><i class="far fa-envelope-open"></i> supportmedical@gmail.com</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-5 col-4">
-                    <div class="header-02-right">
-                        <div class="header-03-icon f-right d-none d-md-block">
-                            <a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a>
-                            <a class="google" href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a class="twit" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- header-start -->
+<header class="header-transparent">
     <div id="sticky-header" class="main-menu-area menu-3">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-xl-2 col-lg-3 d-flex align-items-center">
                     <div class="logo logo-2">
-                        <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="" /></a>
+                        <a href="/"><h4 class="white-color">RAUNAKH</h4></a>
                     </div>
                 </div>
-                <div class="col-xl-8 col-lg-6">
-                    <div class="main-menu text-center">
+                <div class="col-xl-9 col-lg-6">
+                    <div class="main-menu text-right">
                         <nav id="mobile-menu">
                             <ul>
-                                <li class="active"><a href="index.html">home <i class="far fa-angle-down"></i></a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="index.html">home 1</a></li>
-                                        <li><a href="index-2.html">home 2</a></li>
-                                        <li><a href="index-3.html">home 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">about</a> </li>
-                                <li><a href="causes-01.html">Cases <i class="far fa-angle-down"></i></a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="causes-01.html">cases 01</a></li>
-                                        <li><a href="causes-02.html">cases 02</a></li>
-                                        <li><a href="causes-details.html">causes details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="events.html">events <i class="far fa-angle-down"></i></a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="events.html">events</a></li>
-                                        <li><a href="events-02.html">events 02</a></li>
-                                        <li><a href="events-details.html">events-details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog-grid.html">blog <i class="far fa-angle-down"></i></a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="blog-grid.html">blog grid</a></li>
-                                        <li><a href="blog-standard.html">blog standard</a></li>
-                                        <li><a href="blog-details.html">blog details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">pages <i class="far fa-angle-down"></i></a>
-                                    <ul class="sub-menu text-left">
-                                        <li><a href="about-us.html">about us</a></li>
-                                        <li><a href="volunteer.html">volunteer</a></li>
-                                        <li><a href="faq.html">faq</a></li>
-                                        <li><a href="contact.html">contact</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">contact</a></li>
+                                <li class="active"><a href="#donation-container">home</a></li>
+                                <li><a href="#about-container">about</a> </li>
+                                <li><a href="#testimonials-container">Testimonials</a></li>
+                                <li><a href="#gallery-container">Gallery</a></li>
+                                <li><a href="#societies-container">Societies</a></li>
+                                <li><a href="#contact-container">Contact</a></li>
                             </ul>
                         </nav>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 d-none d-lg-block">
-                    <div class="headers-right">
-                        <div class="header-02-login f-right">
-                            <a href="#"><i class="far fa-user-circle"></i> Login</a>
-                        </div>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="mobile-menu"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="header-top-area header-02 d-none d-md-block">
+        <div class="container-fluid">
+            <!-- TODO: Add socket.io list of top 3... -->
+
+            <p class="marquee h4">
+                Recent Donors: 
+
+                <% donators.forEach( function (donate) { %> 
+                   <span style="margin-left: 4em;"> <%= donate.email %> </span> 
+                <% }) %>     
+            </p>
+            
         </div>
     </div>
 </header>

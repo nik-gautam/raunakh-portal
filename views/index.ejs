@@ -22,69 +22,16 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/marquee.css">
+
 
 
     </head>
     <body>
 
-      <%- include('includes/nav') %>
+      <%- include('includes/nav', {donators: donators}) %>
           <%- include('includes/header') %>
-            <!-- features-title-start -->
-            <div class="features-title-area pt-130 pb-240" style="background-image:url(assets/img/bg/bg-09.jpg)">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8 col-lg-8 offset-lg-2 offset-xl-2">
-                            <div class="section-title white-title text-center">
-                                <span><i class="far fa-heart-circle"></i> our features</span>
-                                <h1>Join  with us to know our project for charity peoples</h1>
-                            </div>
-                       </div>
-                    </div>
-                </div>
-            </div>
-            <!-- features-title-start -->
-
-            <!-- features-area-start -->
-            <div class="features-03-area pb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="features-03-wrapper text-center mb-30">
-                                <div class="features-04-icon">
-                                    <a href="about-us.html"><i class="flaticon-care"></i></a>
-                                 </div>
-                                 <div class="features-03-text">
-                                     <h3>Get Helps Child</h3>
-                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
-                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="features-03-wrapper text-center mb-30">
-                                <div class="features-04-icon">
-                                    <a href="about-us.html"><i class="flaticon-icon-829141"></i></a>
-                                 </div>
-                                 <div class="features-03-text">
-                                     <h3>Give Donation</h3>
-                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
-                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="features-03-wrapper text-center mb-30">
-                                <div class="features-04-icon">
-                                    <a href="about-us.html"><i class="flaticon-icon-182480"></i></a>
-                                 </div>
-                                 <div class="features-03-text">
-                                     <h3>Support Us</h3>
-                                     <p>Sed quia consequuntur magni dolores eos ratione voluptatem sequi nesciunt. </p>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- features-area-end -->
+          <%- include('includes/about') %>
 
             
            
@@ -99,16 +46,16 @@
 
         <!-- footer-area-start -->
         <footer>
-            <div class="footer-top-area black-soft-bg pt-50 pb-20">
+            <div class="footer-top-area black-soft-bg pt-30 pb-15">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-2">
-                            <div class="footer-logo mb-30">
-                                <a href="index.html"><img src="assets/img/logo/logo-2.png" alt=""></a>
+                        <div class="col-xl-6 col-lg-5 col-md-6 text-center">
+                            <div class="float-md-left">
+                                <h4 class="mb-30 mt-20 " style="color: rgba(255, 255, 255, 0.534);">Made with <i class="fas fa-heart"></i> by Team Prakriti</h4>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-5 col-md-6">
-                            <div class="footer-icon mb-30">
+                        <div class="col-xl-6 col-lg-5 col-md-6">
+                            <div class="footer-icon mb-30 float-md-right">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-google-plus-g"></i></a>
@@ -116,54 +63,40 @@
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-5 col-md-6">
-                            <div class="footer-img mb-30">
-                                <a href="#"><img src="assets/img/footer/01.png" alt=""></a>
-                                <a href="#"><img src="assets/img/footer/02.png" alt=""></a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-middle-area pt-80 pb-25" style="background-image:url(assets/img/bg/bg-05.jpg)">
-                <div class="container">
-                    <div class="footer-bottom-area  ">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="copyright text-center">
-                                    <p><i class="far fa-copyright"></i> 2020 <a href="#">Fundee.</a> All Rights Reserved</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </footer>
         <!-- footer-area-end -->
 
 
 
+      
+        
 		<!-- JS here -->
-        <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script> -->
         <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
+        <!-- <script src="assets/js/popper.min.js"></script> -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/isotope.pkgd.min.js"></script>
         <script src="assets/js/slick.min.js"></script>
         <script src="assets/js/jquery.meanmenu.min.js"></script>
-        <script src="assets/js/ajax-form.js"></script>
+        <!-- <script src="assets/js/ajax-form.js"></script> -->
         <script src="assets/js/wow.min.js"></script>
         <script src="assets/js/jquery.scrollUp.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
         <script src="assets/js/waypoints.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/jquery.knob.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
+        <!-- <script src="assets/js/imagesloaded.pkgd.min.js"></script> -->
+        <!-- <script src="assets/js/jquery.knob.js"></script> -->
+        <!-- <script src="assets/js/jquery.appear.js"></script> -->
         <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
+        <!-- <script src="assets/js/plugins.js"></script> -->
         <script src="assets/js/main.js"></script>
-
+        <script src="/javascripts/main.js"></script>
+        <script src="/javascripts/timer.js"></script>
     </body>
 
 </html>
