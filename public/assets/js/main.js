@@ -199,17 +199,17 @@ function valiationContact(){
 }
 
 
-function valiationDonation(){
+function validationDonation(){
 	if(document.getElementById("donation-amount-input").value>0){
-		document.getElementById("button-donation").classList.remove("disabled");
 		document.getElementById("error-donation").innerHTML = ``;
+		return true;
 	}
 	else{
-		document.getElementById("button-donation").classList.add("disabled");	
 		document.getElementById("error-donation").innerHTML = `
 			<div class="error-contact mt-2 mb-4">
 						<p>Please enter some valid value. Zero is not acceptable.</p>																			
-			</div>`
+			</div>`;
+			return false;
 	}
 }
 $('.carousel').carousel({
