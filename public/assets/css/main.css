@@ -5633,3 +5633,24 @@ button.b-btn.btn-black {
 #if-expired{
   display: none;
 }
+
+.timer-box{
+  border: 2px solid #7e98ca;
+  border-radius: 50px;
+  text-align: center;
+  padding: 30px 10px;
+  margin: 20px 0;
+  color: black;
+  box-shadow: 5px 2px 2px #7e98ca;
+}
+.timer-box p:first-child{
+  font-size: 3rem;
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.timer-box p{
+  color: #dfd9d9;
+  margin-bottom: 5px;
+}
