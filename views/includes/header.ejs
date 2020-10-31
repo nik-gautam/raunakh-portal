@@ -49,15 +49,26 @@
                         <div class="col-xl-6 col-lg-6">
                             <div class="slid-wrapper mt-50 mb-30">
                                 <div class="section-title  mb-40">
-                                    <h1 class="text-capitalize">Help us achieve our goal</h1>
+                                    <h1 class="text-capitalize mt-0">Help us achieve our goal</h1>
                                 </div>
                                 <form id="volunteer-us-form" class="volunteer-us-form" action="/payment" method="POST">
                                     <div class="row">
+                                        <div class="col-md-4 pr-md-0">
+                                            <input type="button" value="50" class="btn" onclick="add_value(this.value);" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="button" value="100" class="btn" onclick="add_value(this.value);" />
+                                        </div>
+                                        <div class="col-md-4 pl-md-0">
+                                            <input type="button" value="200" class="btn" onclick="add_value(this.value);" />
+                                        </div>
+                                        
                                         <div class="col-md-12">
-                                            <div class="volunteer-icon volunteer-email">
+                                            <div class="">
                                                 <input type="number" step="5" id="donation-amount-input" name="amount" placeholder="Enter Donation amount" />
                                             </div>
                                         </div>
+                                        
                                         <div class="col-md-12" id="error-donation">
                                             
                                         </div>

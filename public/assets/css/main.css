@@ -4885,6 +4885,10 @@ button.b-btn.btn-black {
   font-family: "Barlow", sans-serif;
   background: #f4f4f4; }
 
+  .volunteer-us-form input[type="button"]:hover{
+    background-color: #dad8d8;
+  }
+
 .slid-wrapper #volunteer-us-form input::-moz-placeholder {
   font-size: 14px;
   color: #748188;

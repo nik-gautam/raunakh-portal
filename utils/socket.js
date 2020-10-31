@@ -4,7 +4,8 @@ exports.socketHandler = ( io ) => {
     console.log("Socket Connected")
   
     socket.on("payment-success", function(data) {
-      console.log("socketjs o/p", data)
+      console.log("data sent")
+      io.emit("user_updated",data)
     })
   })
 }
