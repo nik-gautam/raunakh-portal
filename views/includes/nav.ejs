@@ -32,8 +32,8 @@
         <div class="container-fluid">
             <!-- TODO: Add socket.io list of top 3... -->
 
-            <p class="marquee h4">
-                Recent Donors: 
+            <p class="marquee h4" id="marquee">
+               <span id="marquee_head">Recent Donors: </span> 
 
                 <% donators.forEach( function (donate) { %> 
                    <span style="margin-left: 4em;"> <%= donate.email %> </span> 

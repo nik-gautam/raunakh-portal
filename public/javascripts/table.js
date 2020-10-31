@@ -2,7 +2,9 @@ function download_csv(csv, filename) {
   var csvFile;
   var downloadLink;
 
-  csvFile = new Blob([csv], { type: "text/csv" });
+  csvFile = new Blob([csv], {
+    type: "text/csv"
+  });
 
   downloadLink = document.createElement("a");
 
@@ -38,3 +40,18 @@ document.getElementById("download-csv").addEventListener("click", function () {
 });
 
 // document.getElementById("download-csv").onclick((e) => {});
+
+//=================SOCKET UPDATING TABLE================
+
+const socket = io();
+
+socket.on("user_updated", (data2) => {
+  let data=data2.data
+  document.querySelectorAll('.sno').forEach((ele,index)=>
+  {
+    ele.textContent=index+2;
+  })
+  $("#donation-table tbody").prepend(`<tr><th scope="row" class="sno">${1}</th><td>${data.email}</td><td>${data.contact}</td><td>${data.method}</td><td>${data.amount}</td><td>${data.currency}</td><td>${data.order_id}</td><td>${new Intl.DateTimeFormat('en-GB', { year: 'numeric', month:
+  'long', day: '2-digit'}).format(new
+  Date(data.date_created).getTime())}</td></tr>`)
+});
