@@ -19,14 +19,14 @@ body{
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 10px 16px 1px #faca8c59;
+    box-shadow: 0 0 15px 0px #ff81622d;
     padding: 30px;
 }
 
 h3{
     font-size:2.5em;
-    text-transform: capitalize;
-    color:#ffb85a;
+    text-transform: uppercase;
+    color:#d34848;
     margin:0;
     margin-bottom:20px;
 }
@@ -38,11 +38,15 @@ q{
 
 .payment-button{
     color:#fff;
-    background:#ffb85a;
+    background: #d34848;
     border:none;
     padding:10px 50px;
     margin:20px 0;
     border-radius:30px;
     text-transform:capitalize;
     box-shadow: 0 10px 16px 1px #faca8c59;
+}
+.payment-button:hover{
+    background: #e25151;
+    color: white;
 }

@@ -5,7 +5,7 @@
             <div class="row no-gutters">
                 <div class="col-xl-2 col-lg-3 d-flex align-items-center">
                     <div class="logo logo-2">
-                        <a href="/"><h4 class="white-color">RAUNAKH</h4></a>
+                        <a href="/"><img src="/assets/img/logo/raunakh.png" alt="" height="45" width="100"></a>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-6">
@@ -32,8 +32,8 @@
         <div class="container-fluid">
             <!-- TODO: Add socket.io list of top 3... -->
 
-            <p class="marquee h4">
-                Recent Donors: 
+            <p class="marquee h4" id="marquee">
+               <span id="marquee_head">Recent Donors: </span> 
 
                 <% donators.forEach( function (donate) { %> 
                    <span style="margin-left: 4em;"> <%= donate.email %> </span> 
