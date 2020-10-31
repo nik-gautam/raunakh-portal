@@ -10,7 +10,12 @@ let rzr = new Razorpay({
   key_secret: process.env.KEY_SECRET,
 });
 
-
+/**
+ * TODO socket.io
+ * TODO fix colors
+ * TODO make quotes.json
+ * TODO Add donation buttons with set amounts
+ */
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,9 +23,10 @@ router.get('/', function(req, res, next) {
     if(err){
       console.log(err);
     }else{
+      // console.log(donators);
       res.render('index', {donators: donators });
     }
-  }).sort({_id:-1}).limit(3);
+  }).sort({_id:-1}).limit(10);
   
 });
 
@@ -110,9 +116,18 @@ router.post("/thanks", async (req, res, next) => {
 
     Donator.create(newDonator, (err, newDonatorCreated)=>{
       if(err){
-        console.log(err);
+        return res.render("error", {
+          error: err,
+          message: "error aagaya bhai!!",
+        });
       }else{
         console.log("added to db successfully");
+
+        res.render("thanks", {
+          donate: JSON.stringify(newDonatorCreated.toJSON()),
+          currency,
+          amount
+        });
       }
     })
     // payment will look like this
@@ -151,18 +166,11 @@ router.post("/thanks", async (req, res, next) => {
     //*   "created_at": 1603869351
     //   }
 
-    res.render("thanks", {
-      currency: currency,
-      amount: amount,
-    });
+    
   });
 });
 
 
-// io.sockets.on("connection", (socket)=>{
-//   socket.on("donation", (data)=>{
-//     socket.broadcast.emit("donation-successfull", data);
-//   });
-// });
+
 
 module.exports = router;

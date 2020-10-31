@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production node ./bin/www",
+    "start:win": "SET NODE_ENV=development & node ./bin/www",
     "start:dev": "NODE_ENV=development node ./bin/www",
-    "dev": "NODE_ENV=development nodemon ./bin/www"
+    "dev": "NODE_ENV=development nodemon ./bin/www",
+    "dev:win": "SET NODE_ENV=development & nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.5",
@@ -17,6 +19,7 @@
     "http-errors": "~1.8.0",
     "mongoose": "^5.10.11",
     "morgan": "~1.10.0",
+    "node-env": "^0.1.6",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "razorpay": "^2.0.6",

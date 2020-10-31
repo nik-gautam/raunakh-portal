@@ -59,9 +59,7 @@
         right: 220px;
         top: 59%;
     }
-    .promotect-02-wrapper {
-        padding: 95px 38px 97px 66px;
-    }
+   
 
 }
 
@@ -114,21 +112,7 @@
     .single-video-wrapper {
         margin-right: 20px;
     }
-    .promotect-content {
-        right: 30px;
-        left: 30px;
-        padding: 34px 68px;
-    }
-    .promotect-text h1 {
-        font-size: 42px;
-        padding-bottom: 35px;
-        margin-bottom: 26px;
-    }
-    .promotect-wrapper {
-        background-repeat: no-repeat;
-        padding: 24px 20px 24px 20px;
-        background-position: bottom;
-    }
+    
     .newsletter-area {
         margin-right: 0;
         margin-left: 0;
@@ -209,9 +193,7 @@
     .cta-content h1 {
         font-size: 42px;
     }
-    .promotect-02-wrapper {
-        padding: 95px 40px 97px 40px;
-    }
+   
     .footer-news-img {
         margin-right: 15px;
     }
@@ -369,12 +351,7 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .promotect-text h1 {
-        font-size: 42px;
-    }
-    .promotect-wrapper {
-        padding: 70px 60px 75px 60px;
-    }
+    
     .newsletter-area {
         margin-right: 0;
         margin-left: 0;
@@ -479,15 +456,7 @@
     .case-text h3 {
         font-size: 22px;
     }
-    .promotect-bg-img {
-        background-size: cover;
-        height: 500px;
-        left: 0;
-        position: relative;
-        top: 0;
-        width: 100%;
-        background-position: center center;
-    }
+    
     .faq-wrapper {
         margin-right: 0;
     }
@@ -629,12 +598,7 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .promotect-text h1 {
-        font-size: 32px;
-    }
-    .promotect-wrapper {
-        padding: 70px 60px 75px 60px;
-    }
+    
     .newsletter-area {
         margin-right: 0;
         margin-left: 0;
@@ -693,14 +657,7 @@
         margin-right: 10px;
         margin-left: 10px;
     }
-    .promotect-content {
-        right: 20px;
-        left: 20px;
-        padding: 34px 20px;
-    }
-    .promotect-wrapper {
-        padding: 70px 25px 75px 25px;
-    }
+    
     .newsletter-form form input {
         width: 100%;
     }
@@ -823,9 +780,7 @@
         margin-left: 10px;
         margin-right: 10px;
     }
-    .promotect-02-wrapper{
-        padding: 70px 0 75px 0;
-    }
+    
     .faq-wrapper {
         margin-right: 0;
     }
