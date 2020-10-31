@@ -4203,6 +4203,12 @@ label {
   #days, #hours, #minutes, #seconds{
     padding: 0!important;
   }
+  .quote-by{
+    font-size: 1.2rem;
+  }
+  .cta-button{
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 380px){

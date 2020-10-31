@@ -78,7 +78,7 @@ router.post("/payment", async (req, res, next) => {
       console.log(order);
       res.render("payment", { order_id: order.id, amount: order.amount, callbackUri });
     } else {
-      res.render("error", { error: err, message: "error aagaya bhai!!" });
+      res.render("error", { error: err, message: "Something went wrong." });
     }
   });
 });
@@ -91,7 +91,7 @@ router.post("/thanks", async (req, res, next) => {
     if (err) {
       return res.render("error", {
         error: err,
-        message: "error aagaya bhai!!",
+        message: "sSomething went wrong.",
       });
     }
 
@@ -128,8 +128,8 @@ router.post("/thanks", async (req, res, next) => {
         var mailContent = {
           name: "Haala",
           email: newDonatorCreated.email,
-          subject: "hella",
-          message: "fhahflksa"
+          subject: "Thank you for donating!",
+          message: "Thank you for donating!"
         }
   
         
