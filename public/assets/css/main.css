@@ -4015,7 +4015,9 @@ label {
   color: #748188;
   top: 27px; }
 
-
+.volunteer-button{
+  text-align: left;
+}
 .volunteer-button button.btn {
   padding: 26px 44px 26px 40px; }
 
@@ -4138,6 +4140,7 @@ label {
   #timer-heading{
     font-size: 2.3rem;
   }
+  
 }
 @media only screen and (max-width: 576px){
   #timer-heading{
@@ -4162,7 +4165,7 @@ label {
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) and (min-height: 1200px){
   .particle-container{
     top: 70%;
   }
@@ -4178,6 +4181,7 @@ label {
   }
   #timer-heading{
     text-align: center;
+    font-size: 3rem;
   }
   .timer-box{
     text-align: center;
@@ -4185,12 +4189,16 @@ label {
   .slider-video{
     text-align: center;
   }
+  
 }
 
 @media (max-width: 991px){
   .particle-container{
     top: 40%;
     
+  }
+  .slid-wrapper .section-title h1, .timer-box, .slider-video, #timer-heading{
+    text-align: center;
   }
   .timer-box p:first-child{
     font-size: 2.5rem;
@@ -4212,18 +4220,16 @@ label {
   .cta-button{
     margin-top: 100px;
   }
+  .volunteer-button{
+    text-align: center;
+  }
 }
+
+
 
 @media (max-width: 380px){
   .particle-container{
-    top: 45%;
-  }
-  
-}
-
-@media (max-width: 361px){
-  .particle-container{
-    top: 35%;
+    top: 37%;
   }
   .slid-wrapper .volunteer-us-form input{
     height: 50px;
@@ -4231,6 +4237,13 @@ label {
   #days, #hours, #minutes, #seconds{
     padding: 0!important;
   }
+}
+
+@media (min-width: 374px) and (min-height:800px) and (max-height: 1024px){
+  .particle-container{
+    top: 45%;
+  }
+  
 }
 
 @media (max-width: 320px){
@@ -4244,6 +4257,19 @@ label {
     font-size: 30px;
     text-align: center;
   }
+  #timer-heading{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 281px){
+  .particle-container{
+    top: 37%;
+  }
+  #timer-heading{
+    font-size: 1.5rem;
+  }
+  
 }
 
 hr{
