@@ -22,6 +22,8 @@ rzr.on("payment.failed", function (response) {
   // alert(response.error.step);
   // alert(response.error.reason);
   // alert(response.error.metadata);
+  const errorUrl = callbackUri.substring(0,callbackUri.length()-6) + "paymentfailed";
+  window.location.replace(`${errorUrl}?code=${response.error.code}&description=${response.error.description}`);
 });
 
 // rzr.on("payment.authorized", function (response) {

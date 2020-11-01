@@ -84,7 +84,7 @@ router.post("/payment", async (req, res, next) => {
 });
 
 router.post("/thanks", async (req, res, next) => {
-  console.log(req.body);
+  //console.log(req.body);
 
 
   rzr.payments.fetch(req.body.razorpay_payment_id, (err, payment) => {
@@ -95,7 +95,7 @@ router.post("/thanks", async (req, res, next) => {
       });
     }
 
-    console.log(payment);
+    //console.log(payment);
 
     var email = payment.email;
     var contact = payment.contact;
@@ -116,53 +116,76 @@ router.post("/thanks", async (req, res, next) => {
       date_created: date_created
     };
 
-    Donator.create(newDonator, (err, newDonatorCreated)=>{
-      if(err){
-        return res.render("error", {
-          error: err,
-          message: "error aagaya bhai!!",
-        });
-      }else{
-        console.log("added to db successfully");
-
-        var mailContent = {
-          name: "Haala",
-          email: newDonatorCreated.email,
-          subject: "Thank you for donating!",
-          message: "Thank you for donating!"
+      Donator.find({'order_id': order_id}, (err, donator)=>{
+        if(err){
+          console.log(err);
         }
-  
+        else{
+          if(!donator.length){
+            Donator.create(newDonator, (err, newDonatorCreated)=>{
+              if(err){
+                return res.render("error", {
+                  error: err,
+                  message: "error aagaya bhai!!",
+                });
+              }else{
+                console.log("added to db successfully");
         
-        var mailOptions = {
-          from: "403bugs@gmail.com",
-          to: mailContent.email,
-          subject: mailContent.subject,
-          text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
-        };
-  
-        transporter.sendMail(mailOptions, function(error, info){
-          if (error) {
-            return res.render("error", {
-              error: error,
-              message: "error aagaya bhai!!",
+                var mailContent = {
+                  name: "Haala",
+                  email: newDonatorCreated.email,
+                  subject: "Thank you for donating!",
+                  message: "Thank you for donating!"
+                }
+          
+                
+                var mailOptions = {
+                  from: "403bugs@gmail.com",
+                  to: mailContent.email,
+                  subject: mailContent.subject,
+                  text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
+                };
+          
+                transporter.sendMail(mailOptions, function(error, info){
+                  if (error) {
+                    return res.render("error", {
+                      error: error,
+                      message: "error aagaya bhai!!",
+                    });
+                  } else {
+                    console.log('Email sent: ' + info.response);
+                    res.redirect("/");
+                  }
+                });  
+          
+                transporter.close();
+        
+                res.render("thanks", {
+                  donate: JSON.stringify(newDonatorCreated.toJSON()),
+                  currency,
+                  amount
+                });
+              }
             });
-          } else {
-            console.log('Email sent: ' + info.response);
+          }
+          else{
             res.redirect("/");
           }
-        });  
-  
-        transporter.close();
+        }
+      });
 
-        res.render("thanks", {
-          donate: JSON.stringify(newDonatorCreated.toJSON()),
-          currency,
-          amount
-        });
-      }
-    })  
+        
   });
 });
+
+router.get("/paymentfailed", (req,res,next)=>{
+  var error = {
+    code: req.query.code
+  }
+  var message = req.query.description;
+  // var reason = req.query.reason;
+  res.render("error", {error: error, message: message});
+})
 
 
 
