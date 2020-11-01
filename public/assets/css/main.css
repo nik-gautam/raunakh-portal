@@ -4160,6 +4160,8 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
 @media (max-width: 1024px){
   .particle-container{
     top: 70%;
@@ -4184,7 +4186,8 @@ label {
     text-align: center;
   }
 }
-@media (max-width: 767px){
+
+@media (max-width: 991px){
   .particle-container{
     top: 40%;
     
@@ -4212,6 +4215,13 @@ label {
 }
 
 @media (max-width: 380px){
+  .particle-container{
+    top: 45%;
+  }
+  
+}
+
+@media (max-width: 361px){
   .particle-container{
     top: 35%;
   }
