@@ -180,7 +180,7 @@ router.post("/thanks", async (req, res, next) => {
 
 router.get("/paymentfailed", (req,res,next)=>{
   var error = {
-    code: req.query.code
+    status: req.query.code
   }
   var message = req.query.description;
   // var reason = req.query.reason;
