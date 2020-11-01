@@ -148,7 +148,11 @@ $('.testimonial-active').slick({
 });
 
 
-
+	//COUNTER 
+	$('.numb').counterUp({
+		delay: 20,
+		time: 1100
+	});
 	
 
 	// scrollToTop

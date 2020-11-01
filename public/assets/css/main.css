@@ -1,4 +1,4 @@
-html{
+html, body{
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -3421,7 +3421,7 @@ label {
   min-height: 950px; }
 
 .slider-02-height {
-  min-height: 950px; }
+  min-height: 1050px; }
 
 .slider-03-height {
   min-height: 810px; }
@@ -4223,6 +4223,13 @@ label {
   .volunteer-button{
     text-align: center;
   }
+  .slider-video a{
+    height: 50px;
+    width: 50px;
+  }
+  .slider-video a i {
+    transform: translateY(-10px);
+  }
 }
 
 
@@ -4284,4 +4291,37 @@ hr{
   width: 100%;
   color: rgba(53, 35, 35, 0.514);
   height: 1px;
+}
+
+
+/* ************************************************************* */
+/* ************************** COUNTER ************************** */
+/* ************************************************************* */
+
+.big-counter-text .desc{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: rgb(255, 219, 219);
+  
+}
+
+.big-counter-text .numb, .big-counter-text .rs{
+  color: rgb(199, 51, 51);
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+
+.counter-text .numb, .counter-text .rs{
+  color: rgb(199, 51, 51);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+
+.counter-text .desc{
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: rgb(255, 219, 219);
+  
 }
