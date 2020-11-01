@@ -4239,13 +4239,19 @@ label {
   }
 }
 
+
 @media (min-width: 374px) and (min-height:800px) and (max-height: 1024px){
   .particle-container{
     top: 45%;
   }
   
 }
-
+@media (min-width: 400px) and (min-height:900px) and (max-height: 1024px){
+  .particle-container{
+    top: 50%;
+  }
+  
+}
 @media (max-width: 320px){
   .particle-container{
     top: 30%;
