@@ -178,14 +178,14 @@ router.post("/thanks", async (req, res, next) => {
   });
 });
 
-router.get("/paymentfailed", (req,res,next)=>{
-  var error = {
-    status: req.query.code
-  }
-  var message = req.query.description;
-  // var reason = req.query.reason;
-  res.render("error", {error: error, message: message});
-})
+// router.get("/paymentfailed", (req,res,next)=>{
+//   var error = {
+//     status: req.query.code
+//   }
+//   var message = req.query.description;
+//   // var reason = req.query.reason;
+//   res.render("error", {error: error, message: message});
+// })
 
 
 
