@@ -37,6 +37,34 @@ router.get('/', function(req, res, next) {
   
 });
 
+router.post("/", (req, res)=>{
+  var mailContent = {
+    name: req.body.contactname,
+    email: req.body.contactemail,
+    subject: req.body.contactsubject,
+    message: req.body.contactmessage
+};
+
+var mailOptions = {
+  from: mailContent.email,
+  to: '403bugs@gmail.com',
+  subject: "[Raunakh]" + mailContent.subject,
+  text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+    res.redirect("/");
+  }
+});  
+
+transporter.close();
+
+});
+
 router.get("/donations", (req, res) => {
   if(req.isAuthenticated()) {
     Donator.find({}, (err, donators)=>{
