@@ -93,6 +93,7 @@ router.post("/thanks", async (req, res, next) => {
         message: "error aagaya bhai!!",
       });
     }
+    console.log(payment)
 
     var email = payment.email;
     var contact = payment.contact;
