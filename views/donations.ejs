@@ -40,6 +40,7 @@
               <th scope="col">Currency</th>
               <th scope="col">Order Id</th>
               <th scope="col">Date</th>
+              <th scope="col">Time</th>
             </tr>
           </thead>
 
@@ -59,6 +60,10 @@
                 <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month:
                 'long', day: '2-digit'}).format(new
                 Date(donator.date_created).getTime()) %>
+              </td>
+              <td>
+                <%= new Intl.DateTimeFormat('en-GB',{hour: 'numeric', minute: 'numeric', second: 'numeric'}).format(new
+                Date(donator.date_created)) %>
               </td>
 
               <!-- table row end -->
