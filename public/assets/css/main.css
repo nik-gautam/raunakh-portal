@@ -2920,10 +2920,16 @@ label {
 
 .cta-button {
   display: inline-block; 
-  margin-top: 150px;
+  margin-top: 100px;
   /* margin-left: auto;
   margin-right: auto; */
 }
+@media (min-width: 991px) {
+  .cta-button {
+    margin-top: 80px;
+  }
+}
+
 @media (min-width: 767px) {
   .cta-button {
     margin-top: 20px;
@@ -3614,7 +3620,7 @@ label {
   top: 17px; }
 
 .slid-wrapper .section-title h1 {
-  font-size: 35px; }
+  font-size: 30px; }
 
 .slider-content > span {
   background: #ffcd60;
@@ -4015,9 +4021,6 @@ label {
   color: #748188;
   top: 27px; }
 
-.volunteer-button{
-  text-align: left;
-}
 .volunteer-button button.btn {
   padding: 26px 44px 26px 40px; }
 
@@ -4035,7 +4038,7 @@ label {
   font-style: italic;
   content: 'Be charitable and indulgent to everyone but yourself';
   letter-spacing: 2px;
-  animation: switch 100s linear infinite;
+  animation: switch 80s linear infinite;
 }
 .changing-text-animation h1 div:before{
   font-style: normal;
@@ -4043,7 +4046,7 @@ label {
   /* margin-top: 1.5em; */
   content: '- Joseph Joubert';
   letter-spacing: 2px;
-  animation: switch2 100s linear infinite;
+  animation: switch2 80s linear infinite;
 }
 
 
@@ -4118,7 +4121,7 @@ label {
   color: black;
 }
 .timer-box p:first-child{
-  font-size: 4rem;
+  font-size: 5rem;
   margin-top: 10px;
   color: white;
   padding-bottom: 1rem;
@@ -4128,7 +4131,7 @@ label {
 .timer-box p{
   color: #dfd9d9;
   margin-bottom: 5px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 #timer-heading{
   font-size: 46px;
@@ -4217,9 +4220,7 @@ label {
   .quote-by{
     font-size: 1.2rem;
   }
-  .cta-button{
-    margin-top: 100px;
-  }
+  
   .volunteer-button{
     text-align: center;
   }

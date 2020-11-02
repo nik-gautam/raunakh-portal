@@ -53,9 +53,9 @@ router.post("/", (req, res)=>{
 };
 
 var mailOptions = {
-  from: mailContent.email,
+  from: '403bugs@gmail.com',
   to: '403bugs@gmail.com',
-  subject: "[Raunakh]" + mailContent.subject,
+  subject: "[Raunakh] " + mailContent.subject,
   text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
 };
 

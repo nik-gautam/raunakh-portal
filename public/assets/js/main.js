@@ -1,10 +1,45 @@
 (function ($) {
 	"use strict";
-
 	$(".main-menu li").on("click", function(){
 		$(".main-menu").find(".active").removeClass("active");
 		$(this).addClass("active");
 	 });
+
+	 $(window).scroll(function() { 
+		var Scroll = $(window).scrollTop() + 1,
+					SectionOneOffset = $('#donation-container').offset().top, 
+					SectionTwoOffset = $('#about-container').offset().top,
+					SectionThreeOffset = $('#testimonials-container').offset().top,
+					SectionFourOffset = $('#gallery-container').offset().top,
+					SectionFiveOffset = $('#societies-container').offset().top,
+					SectionSixOffset = $('#contact-container').offset().top;
+
+		if (Scroll >= SectionOneOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-1").addClass("active"); 
+		} 
+		if (Scroll >= SectionTwoOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-2").addClass("active"); 
+		} 
+		if (Scroll >= SectionThreeOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-3").addClass("active"); 			
+		} 
+		if (Scroll >= SectionFourOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-4").addClass("active"); 			
+		} 
+		if (Scroll >= SectionFiveOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-5").addClass("active"); 			
+		}
+		if (Scroll >= SectionSixOffset) { 
+			$(".main-menu").find(".active").removeClass("active");
+			$(".menu-item-6").addClass("active"); 			
+		}
+	});
+
 	// meanmenu
 	$('#mobile-menu').meanmenu({
 		meanMenuContainer: '.mobile-menu',
@@ -276,3 +311,4 @@ $('.carousel').carousel({
   function add_value(val){
 	  document.getElementById("donation-amount-input").value = val;
   }
+
