@@ -148,20 +148,12 @@ $('.testimonial-active').slick({
 });
 
 
-
+	//COUNTER 
+	$('.numb').counterUp({
+		delay: 20,
+		time: 1100
+	});
 	
-	/* magnificPopup img view */
-	$('.popup-image').magnificPopup({
-		type: 'image',
-		gallery: {
-		  enabled: true
-		}
-	});
-
-	/* magnificPopup video view */
-	$('.popup-video').magnificPopup({
-		type: 'iframe'
-	});
 
 	// scrollToTop
 	$.scrollUp({
@@ -175,6 +167,46 @@ $('.testimonial-active').slick({
 		activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 	});
 
+	$(function(){
+  
+		var swiper = new Swiper('.carousel-gallery .swiper-container', {
+		  effect: 'slide',
+		  speed: 900,
+		  slidesPerView: 3,
+		  spaceBetween: 20,
+		  simulateTouch: true,
+		  autoplay: {
+			delay: 5000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false
+		  },
+		  pagination: {
+			el: '.carousel-gallery .swiper-pagination',
+			clickable: true
+		  },
+		  breakpoints: {
+			// when window width is <= 320px
+			320: {
+			  slidesPerView: 1,
+			  spaceBetween: 5
+			},
+			// when window width is <= 480px
+			425: {
+			  slidesPerView: 1,
+			  spaceBetween: 10
+			},
+			// when window width is <= 640px
+			768: {
+			  slidesPerView: 1,
+			  spaceBetween: 20
+			}
+		  }
+		}); /*http://idangero.us/swiper/api/*/
+	  
+		
+	  
+	});
+
 	// WOW active
 	new WOW().init();
 
@@ -183,18 +215,43 @@ $('.testimonial-active').slick({
 	})(jQuery);
 
 
-function valiationContact(){
+function validationContact(){
+	var email = document.getElementById("contact-email").value;
+	var name = document.getElementById("contact-name").value;
+
+	if (!name.match(/^[a-zA-Z]+$/)) {
+
+		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
+			<div class="newsletter-form newsletter-02-form">
+					<p>Please enter correct name.</p>
+			</div>
+		</div>`;
+		return false;
+	
+	  }
+
+	if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
+			<div class="newsletter-form newsletter-02-form">
+					<p>Please enter a valid email address.</p>
+			</div>
+		</div>`;
+		return false;
+	
+	}
+
 	if(document.getElementById("contact-name").value.length===0 || document.getElementById("contact-email").value.length===0 || document.getElementById("contact-subject").value.length===0 ||document.getElementById("contact-message").value.length===0){
-		document.getElementById("button-contact").classList.add("disabled");	
 		document.getElementById("error-contact").innerHTML=` <div class="newsletters-wrapper mb-30 error-contact ">
 			<div class="newsletter-form newsletter-02-form">
 					<p>All fields are neccessary. Please enter all fields.</p>
 			</div>
-		</div>`;	
+		</div>`;
+		return false;	
 	}
 	else{
-		document.getElementById("button-contact").classList.remove("disabled");
 		document.getElementById("error-contact").innerHTML=``;
+		return true;
 	}
 }
 

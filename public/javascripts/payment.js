@@ -16,12 +16,12 @@ var options = {
 let rzr = new Razorpay(options);
 
 rzr.on("payment.failed", function (response) {
-  alert(response.error.code);
+  // alert(response.error.code);
   alert(response.error.description);
-  alert(response.error.source);
-  alert(response.error.step);
-  alert(response.error.reason);
-  alert(response.error.metadata);
+  // alert(response.error.source);
+  // alert(response.error.step);
+  // alert(response.error.reason);
+  // alert(response.error.metadata);
 });
 
 // rzr.on("payment.authorized", function (response) {
