@@ -62,7 +62,8 @@
                 Date(donator.date_created).getTime()) %>
               </td>
               <td>
-                <%= new Intl.DateTimeFormat('en-GB',{hour: 'numeric', minute: 'numeric', second: 'numeric'}).format(new
+                <%= new Intl.DateTimeFormat('en-GB',{hour: 'numeric', minute: 'numeric', second: 'numeric', 
+                timeZone: 'Asia/Kolkata'}).format(new
                 Date(donator.date_created)) %>
               </td>
 
