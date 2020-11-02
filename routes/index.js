@@ -30,8 +30,15 @@ router.get('/', function(req, res, next) {
     if(err){
       console.log(err);
     }else{
-      // console.log(donators);
-      res.render('index', {donators: donators });
+      Donator.find({}).then((allfetched)=>{
+        let amount=Math.round(allfetched.reduce((acc,val)=>acc+ parseFloat( (val.amount)),0))
+      let count=allfetched.length;
+      res.render('index', {donators: donators , amount , count});
+      }).catch((err)=>res.render("error", {
+        error: err,
+        message: "error aagaya bhai mongodb m!!",
+      }))
+      
     }
   }).sort({_id:-1}).limit(10);
   
