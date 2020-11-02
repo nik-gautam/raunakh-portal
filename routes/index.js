@@ -18,8 +18,8 @@ var transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "403bugs@gmail.com",
-    pass: "herokuneeded"
+    user: "vids.test.acc@gmail.com",
+    pass: "testaccount172"
   }
 });
 
@@ -53,8 +53,8 @@ router.post("/", (req, res)=>{
 };
 
 var mailOptions = {
-  from: '403bugs@gmail.com',
-  to: '403bugs@gmail.com',
+  from: 'vids.test.acc@gmail.com',
+  to: 'vids.test.acc@gmail.com',
   subject: "[Raunakh] " + mailContent.subject,
   text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
 };
@@ -176,7 +176,7 @@ router.post("/thanks", async (req, res, next) => {
           
                 
                 var mailOptions = {
-                  from: "403bugs@gmail.com",
+                  from: "vids.test.acc@gmail.com",
                   to: mailContent.email,
                   subject: mailContent.subject,
                   text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
