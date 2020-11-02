@@ -45,21 +45,21 @@ router.get('/', function(req, res, next) {
 });
 
 router.post("/", (req, res)=>{
-  var mailContent = {
+  var contactContent = {
     name: req.body.contactname,
     email: req.body.contactemail,
     subject: req.body.contactsubject,
     message: req.body.contactmessage
 };
 
-var mailOptions = {
+var contactOptions = {
   from: 'vids.test.acc@gmail.com',
   to: 'vids.test.acc@gmail.com',
-  subject: "[Raunakh] " + mailContent.subject,
-  text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
+  subject: "[Raunakh] " + contactContent.subject,
+  text: contactContent.name + " sent you a message : \n" + JSON.stringify(contactContent.message) + "\n email id: " + contactContent.email
 };
 
-transporter.sendMail(mailOptions, function(error, info){
+transporter.sendMail(contactOptions, function(error, info){
   if (error) {
     console.log(error);
   } else {
@@ -179,7 +179,7 @@ router.post("/thanks", async (req, res, next) => {
                   from: "vids.test.acc@gmail.com",
                   to: mailContent.email,
                   subject: mailContent.subject,
-                  text: mailContent.name + " sent you a message : \n" + JSON.stringify(mailContent.message) + "\n email id: " + mailContent.email
+                  text: mailContent.message
                 };
           
                 transporter.sendMail(mailOptions, function(error, info){
