@@ -4089,6 +4089,13 @@ label {
   font-size: 1.2rem;
   font-style: italic;
 }
+@media(max-width: 768px){
+  .error-contact p{
+    padding: 0.8rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+}
 
 .carousel-inner > .carousel-item >img{
   min-height : 500px;
