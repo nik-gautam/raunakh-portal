@@ -8,11 +8,13 @@ const connectDB = require('./config/db');
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const session = require("express-session");
+const compression = require('compression');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(compression());
 connectDB();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
