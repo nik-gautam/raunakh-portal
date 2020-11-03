@@ -52,9 +52,9 @@ socket.on("user_updated", (data2) => {
   {
     ele.textContent=index+2;
   })
-  $("#donation-table tbody").prepend(`<tr><th scope="row" class="sno">${1}</th><td>${data.email}</td><td>${data.contact}</td><td>${data.method}</td><td>${data.amount}</td><td>${data.currency}</td><td>${data.order_id}</td><td>${new Intl.DateTimeFormat('en-GB', { year: 'numeric', month:
+  $("#donation-table tbody").prepend(`<tr><th scope="row" class="sno">${1}</th><td>${data.email}</td><td>${data.contact}</td><td>${data.method}</td><td>${data.amount}</td><td>${data.currency}</td><td>${data.order_id}</td><td>${new Intl.DateTimeFormat('en-US', { year: 'numeric', month:
   'long', day: '2-digit'}).format(new
-  Date(data.date_created).getTime())}</td><td>${new Intl.DateTimeFormat('en-GB',{hour: 'numeric', minute: 'numeric', second: 'numeric', 
+  Date(data.date_created).getTime())}</td><td>${new Intl.DateTimeFormat('en-US',{hour: 'numeric', minute: 'numeric', second: 'numeric', 
   timeZone: 'Asia/Kolkata'}).format(new
   Date(data.date_created))}</td></tr>`)
 });
