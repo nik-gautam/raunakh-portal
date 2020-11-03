@@ -6,6 +6,8 @@ var io = require('socket.io')(server);
 var Razorpay = require("razorpay");
 var Donator = require('../models/donations');
 const nodemailer = require("nodemailer");
+var ejs = require('ejs');
+const path = require('path');
 
 let rzr = new Razorpay({
   key_id: process.env.KEY_ID,
@@ -166,12 +168,18 @@ router.post("/thanks", async (req, res, next) => {
                 });
               }else{
                 console.log("added to db successfully");
+                ejs.renderFile(path.join(__dirname, '..', 'email', 'email.ejs'), function(err, str){
+                  // str => Rendered HTML string
+                  if(err) {
+                    console.log(err);
+                    return;
+                  }
         
                 var mailContent = {
-                  name: "Haala",
+                  name: "Raunakh",
                   email: newDonatorCreated.email,
                   subject: "Thank you for donating!",
-                  message: "Thank you for donating!"
+                  
                 }
           
                 
@@ -179,7 +187,7 @@ router.post("/thanks", async (req, res, next) => {
                   from: "vids.test.acc@gmail.com",
                   to: mailContent.email,
                   subject: mailContent.subject,
-                  text: mailContent.message
+                  html: str
                 };
           
                 transporter.sendMail(mailOptions, function(error, info){
@@ -195,6 +203,8 @@ router.post("/thanks", async (req, res, next) => {
                 });  
           
                 transporter.close();
+                   
+              });
         
                 res.render("thanks", {
                   donate: JSON.stringify(newDonatorCreated.toJSON()),
