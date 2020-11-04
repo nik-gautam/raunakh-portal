@@ -1,11 +1,11 @@
-const finalDate = new Date("November 13,2020 00:12:08").getTime();
+const finalDate = new Date("November 13,2020 18:00:00").getTime();
  
  timer = () => {
     const now = new Date().getTime();
     const diff = finalDate - now;
     if(diff < 0){
         clearInterval(x);
-        document.getElementById('timer-heading').innerHTML = "Event has been started";
+        document.getElementById('timer-heading').innerHTML = "Event has been started <br> <p>Click below to join now</p>";
         $('.slider-02-text').addClass("margin-custom-class");
         document.getElementById('timer-container').style.display = "none";
         // document.getElementById('if-expired').style.display = "block";
