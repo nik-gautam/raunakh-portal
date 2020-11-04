@@ -233,7 +233,18 @@ router.post("/thanks", async (req, res, next) => {
 //   res.render("error", {error: error, message: message});
 // })
 
+router.get("/privacypolicy", (req, res) => {
 
+  res.render("privacyPolicy");
+})
+
+router.get("/refundpolicy", (req, res) => {
+  res.render("refund");
+})
+
+router.get("/tnc", (req, res) => {
+  res.render("tnc");
+})
 
 
 module.exports = router;
