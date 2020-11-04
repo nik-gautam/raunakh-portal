@@ -6,6 +6,7 @@
     "start": "NODE_ENV=production node ./bin/www",
     "start:win": "SET NODE_ENV=development & node ./bin/www",
     "start:dev": "NODE_ENV=development node ./bin/www",
+    "dev:prod": "NODE_ENV=production nodemon ./bin/www",
     "dev": "NODE_ENV=development nodemon ./bin/www",
     "dev:win": "SET NODE_ENV=development & nodemon ./bin/www"
   },

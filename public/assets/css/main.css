@@ -4429,5 +4429,9 @@ hr{
     height: 60px;
   }
 }
+
+.policy a:hover {
+  color: #d63031;
+}
 /*# Carousel Gallery*/
 

@@ -1,7 +1,11 @@
 var mongoose = require('mongoose');
+require("dotenv").config()
 
-const URI = "mongodb+srv://prakriti-tech:ptcreations@raunakh-portal.blrdq.mongodb.net/donations?retryWrites=true&w=majority";
+let URI = process.env.MONGO_URL_DEV;
 
+if(process.env.NODE_ENV == "production") {
+    URI = process.env.MONGO_URL_PROD
+}
 const connectDB = async ()=>{
     await mongoose.connect(URI, {useUnifiedTopology: true ,useNewUrlParser: true});
     console.log("db connected");
