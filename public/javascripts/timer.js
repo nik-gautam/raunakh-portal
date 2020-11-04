@@ -5,9 +5,11 @@ const finalDate = new Date("November 13,2020 00:12:08").getTime();
     const diff = finalDate - now;
     if(diff < 0){
         clearInterval(x);
-        document.getElementById('timer-heading').style.display = "none";
-        document.getElementById('container').style.display = "none";
-        document.getElementById('if-expired').style.display = "block";
+        document.getElementById('timer-heading').innerHTML = "Event has been started";
+        $('.slider-02-text').addClass("margin-custom-class");
+        document.getElementById('timer-container').style.display = "none";
+        // document.getElementById('if-expired').style.display = "block";
+        document.getElementById('live-stream').style.display = "block";
         
     }
     let days = Math.floor(diff/(1000*60*60*24));
