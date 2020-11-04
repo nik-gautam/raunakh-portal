@@ -14,7 +14,8 @@ const { socketHandler } = require("../utils/socket");
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || "3000");
+var port = normalizePort(process.env.PORT || "3002");
+// var port = 3002;
 app.set("port", port);
 
 /**
@@ -34,7 +35,7 @@ socketHandler(io);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port, () => console.log("Listening on Port " + port ));
 server.on("error", onError);
 server.on("listening", onListening);
 
