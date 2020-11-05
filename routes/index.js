@@ -255,7 +255,7 @@ router.post("/hook", (req, res) => {
   console.log(req.body);
 
   if(req.body.event == "payment.captured") {
-    return res.redirect("/");
+    return res.render('tnc');
   }
   res.status(200).end();
 });
