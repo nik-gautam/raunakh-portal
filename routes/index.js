@@ -133,7 +133,6 @@ router.post("/payment", async (req, res, next) => {
 });
 
 router.get("/thanks", async (req, res, next) => {
-  
   Donator.findOne({ payment_id: req.query.payment_id })
     .then((newDonatorCreated) => {
       console.log("added to db successfully");
@@ -174,7 +173,7 @@ router.get("/thanks", async (req, res, next) => {
         }
       );
 
-      console.log(JSON.stringify(newDonatorCreated));  
+      console.log(JSON.stringify(newDonatorCreated));
 
       res.render("thanks", {
         donate: JSON.stringify(newDonatorCreated),
@@ -242,46 +241,29 @@ router.post("/hook", (req, res) => {
   res.status(200).end();
 });
 
-// {
-//*   id: 'pay_FxSaFtXTc2EzZp',
-//   entity: 'payment',
-//*   amount: 10000,
-//*   currency: 'INR',
-//   status: 'captured',
-//   order_id: 'order_FxSa5bf6x4TKxt',
-//   invoice_id: null,
-//   international: false,
-//*   method: 'upi',
-//   amount_refunded: 0,
-//   refund_status: null,
-//   captured: true,
-//   description: null,
-//   card_id: null,
-//   bank: null,
-//   wallet: null,
-//   vpa: 'success@razorpay',
-//*   email: 'nik@g.com',
-//*   contact: '+3212132132',
-//   notes: {
-//     email: 'nik@g.com',
-//     phone: '3212132132',
-//     name: 'nik',
-//     address: 'asd',
-//     city: 'ads',
-//     pincode: '100220',
-//     state: 'sadj'
-//   },
-//   fee: 236,
-//   tax: 36,
-//   error_code: null,
-//   error_description: null,
-//   error_source: null,
-//   error_step: null,
-//   error_reason: null,
-//   acquirer_data: {
-//     rrn: '493231621054',
-//     upi_transaction_id: '292184299770B049BDF561960F81C650'
-//   },
-//   created_at: 1604573429
-// }
+router.post("/paytm", async (req, res) => {
+  var body = req.body;
+
+  var paytmCount = await Donator.count({ method: "paytm" });
+
+  let newDonator = new Donator({
+    email: body.email,
+    contact: body.contact,
+    method: "paytm",
+    amount: body.amount,
+    currency: "INR",
+    order_id: "paytm_order_" + (paytmCount + 1),
+    payment_id: "paytm_id_" + (paytmCount + 1),
+    date_created: Date.now(),
+  });
+
+  try {
+    let savedDonator = await newDonator.save();
+    console.log(savedDonator);
+    return res.redirect("/");
+  } catch (error) {
+    res.redirect("/");
+  }
+});
+
 module.exports = router;
