@@ -39,7 +39,7 @@
 			$(".menu-item-6").addClass("active"); 			
 		}
 	});
-
+	
 	// meanmenu
 	$('#mobile-menu').meanmenu({
 		meanMenuContainer: '.mobile-menu',

@@ -4436,3 +4436,16 @@ hr{
   color: #d63031;
 }
 /*# Carousel Gallery*/
+.paytm-form input[type= "text"]{
+  border: none;
+  height: 60px;
+  margin-bottom: 10px;
+  padding: 0 30px;
+  width: 100%;
+  font-size: 14px;
+  color: #748188;
+  font-weight: 600;
+  border-radius: 0;
+  font-family: "Barlow", sans-serif;
+  background: #f4f4f4; 
+}

@@ -70,38 +70,15 @@
                                     <h1 class="text-capitalize mt-0">Help us achieve our goal</h1>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 w-100">
+                                    <div class="col-md-6 ">
                                         <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FtnY0qypZyGZ3y"> </script> </form>
                                     </div>
-                                </div>
-                                <form id="volunteer-us-form" class="volunteer-us-form" action="/payment" method="POST">
-                                    <div class="row">
-                                        <!-- <div class="col-md-4 pr-md-0">
-                                            <input type="button" value="50" class="btn" onclick="add_value(this.value);" />
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input type="button" value="100" class="btn" onclick="add_value(this.value);" />
-                                        </div>
-                                        <div class="col-md-4 pl-md-0">
-                                            <input type="button" value="200" class="btn" onclick="add_value(this.value);" />
-                                        </div> -->
-                                        
-                                        <!-- <div class="col-md-12">
-                                            <div class="">
-                                                <input type="text" class="text-center" id="donation-amount-input" name="amount" placeholder="Enter Donation Amount" />
-                                            </div>
-                                        </div> -->
-                                        
-                                        <div class="col-md-12" id="error-donation">
-                                            
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="volunteer-button" >
-                                                <button type="submit" style="width: 100%;" class="btn" id="button-donation" onclick=" return validationDonation()" col><b>DONATE <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-6">
+                                        <button class="btn " href="#" data-target="#paypaytm" data-toggle="modal">Pay with Paytm</button>
                                     </div>
-                                </form>
+                                </div>
+                               
+                                
                             </div>
                         </div>
                     </div>
@@ -109,4 +86,21 @@
             </div>
             
        </div>
+       <div id="paypaytm" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          
+          <div class="modal-content">
+            <div class="modal-body">
+              <button data-dismiss="modal" class="close">&times;</button>
+              <h4 class="mb-3">Pay with Paytm</h4>
+              <form class="paytm-form" action="/paytm" method="POST">
+                <input type="text" name="email" class="username form-control" placeholder="Email"/>
+                <input type="text" name="contact" class="password form-control" placeholder="Phone number"/>
+                <input id="donation-amount-input" type="text" name="amount" class="password form-control" placeholder="Donation Amount"/>
+                <button class="btn" type="submit" value="Donate"><b>Donate <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
+              </form>
+            </div>
+          </div>
+        </div>  
+      </div>
        <!-- slider-end -->
