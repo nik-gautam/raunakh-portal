@@ -7,6 +7,7 @@ var donatorSchema = new mongoose.Schema({
     amount: String,
     currency: String,
     order_id: String,
+    payment_id: String,
     date_created: Date
 });
 

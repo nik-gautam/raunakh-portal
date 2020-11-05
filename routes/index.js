@@ -132,102 +132,59 @@ router.post("/payment", async (req, res, next) => {
   });
 });
 
-router.post("/thanks", async (req, res, next) => {
-  //console.log(req.body);
+router.get("/thanks", async (req, res, next) => {
+  
+  Donator.findOne({ payment_id: req.query.payment_id })
+    .then((newDonatorCreated) => {
+      console.log("added to db successfully");
+      ejs.renderFile(
+        path.join(__dirname, "..", "email", "email.ejs"),
+        function (err, str) {
+          if (err) {
+            console.log(err);
+            return;
+          }
 
-  rzr.payments.fetch(req.body.razorpay_payment_id, (err, payment) => {
-    if (err) {
-      return res.render("error", {
-        error: err,
-        message: "sSomething went wrong.",
-      });
-    }
-    console.log(payment);
+          var mailContent = {
+            name: "Raunakh",
+            email: newDonatorCreated.email,
+            subject: "Thank you for donating!",
+          };
 
-    //console.log(payment);
+          var mailOptions = {
+            from: "octave.raunakh@gmail.com",
+            to: mailContent.email,
+            subject: mailContent.subject,
+            html: str,
+          };
 
-    var email = payment.email;
-    var contact = payment.contact;
-    var method = payment.method;
-    var amount = payment.amount / 100;
-    var currency = payment.currency;
-    var order_id = payment.order_id;
-    var date_created = new Date();
-
-    var newDonator = {
-      email: email,
-      contact: contact,
-      method: method,
-      amount: amount,
-      currency: currency,
-      order_id: order_id,
-      date_created: date_created,
-    };
-
-    Donator.find({ order_id: order_id }, (err, donator) => {
-      if (err) {
-        console.log(err);
-      } else {
-        if (!donator.length) {
-          Donator.create(newDonator, (err, newDonatorCreated) => {
-            if (err) {
+          transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
               return res.render("error", {
-                error: err,
+                error: error,
                 message: "error aagaya bhai!!",
               });
             } else {
-              console.log("added to db successfully");
-              ejs.renderFile(
-                path.join(__dirname, "..", "email", "email.ejs"),
-                function (err, str) {
-                  // str => Rendered HTML string
-                  if (err) {
-                    console.log(err);
-                    return;
-                  }
-
-                  var mailContent = {
-                    name: "Raunakh",
-                    email: newDonatorCreated.email,
-                    subject: "Thank you for donating!",
-                  };
-
-                  var mailOptions = {
-                    from: "octave.raunakh@gmail.com",
-                    to: mailContent.email,
-                    subject: mailContent.subject,
-                    html: str,
-                  };
-
-                  transporter.sendMail(mailOptions, function (error, info) {
-                    if (error) {
-                      return res.render("error", {
-                        error: error,
-                        message: "error aagaya bhai!!",
-                      });
-                    } else {
-                      console.log("Email sent: " + info.response);
-                      res.redirect("/");
-                    }
-                  });
-
-                  transporter.close();
-                }
-              );
-
-              res.render("thanks", {
-                donate: JSON.stringify(newDonatorCreated.toJSON()),
-                currency,
-                amount,
-              });
+              console.log("Email sent: " + info.response);
+              res.redirect("/");
             }
           });
-        } else {
-          res.redirect("/");
+
+          transporter.close();
         }
-      }
+      );
+
+      console.log(JSON.stringify(newDonatorCreated));  
+
+      res.render("thanks", {
+        donate: JSON.stringify(newDonatorCreated),
+        currency: newDonatorCreated.currency,
+        amount: newDonatorCreated.amount,
+      });
+    })
+    .catch((err) => {
+      res.redirect("/");
     });
-  });
 });
 
 // router.get("/paymentfailed", (req,res,next)=>{
@@ -248,16 +205,83 @@ router.get("/refundpolicy", (req, res) => {
 });
 
 router.get("/tnc", (req, res) => {
+  console.log(req.body);
   res.render("tnc");
 });
 
 router.post("/hook", (req, res) => {
-  console.log(req.body);
+  var payment = req.body.payload.payment.entity;
+  // console.log(payment);
 
-  if(req.body.event == "payment.captured") {
-    return res.render('tnc');
+  if (req.body.event == "payment.captured") {
+    var email = payment.email;
+    var contact = payment.contact;
+    var method = payment.method;
+    var amount = payment.amount / 100;
+    var currency = payment.currency;
+    var order_id = payment.order_id;
+    var date_created = new Date();
+
+    var newDonator = new Donator({
+      email: email,
+      contact: contact,
+      method: method,
+      amount: amount,
+      currency: currency,
+      order_id: order_id,
+      payment_id: payment.id,
+      date_created: date_created,
+    });
+
+    newDonator
+      .save()
+      .then((savedDonator) => console.log(savedDonator))
+      .catch((err) => console.log(err));
   }
+
   res.status(200).end();
 });
 
+// {
+//*   id: 'pay_FxSaFtXTc2EzZp',
+//   entity: 'payment',
+//*   amount: 10000,
+//*   currency: 'INR',
+//   status: 'captured',
+//   order_id: 'order_FxSa5bf6x4TKxt',
+//   invoice_id: null,
+//   international: false,
+//*   method: 'upi',
+//   amount_refunded: 0,
+//   refund_status: null,
+//   captured: true,
+//   description: null,
+//   card_id: null,
+//   bank: null,
+//   wallet: null,
+//   vpa: 'success@razorpay',
+//*   email: 'nik@g.com',
+//*   contact: '+3212132132',
+//   notes: {
+//     email: 'nik@g.com',
+//     phone: '3212132132',
+//     name: 'nik',
+//     address: 'asd',
+//     city: 'ads',
+//     pincode: '100220',
+//     state: 'sadj'
+//   },
+//   fee: 236,
+//   tax: 36,
+//   error_code: null,
+//   error_description: null,
+//   error_source: null,
+//   error_step: null,
+//   error_reason: null,
+//   acquirer_data: {
+//     rrn: '493231621054',
+//     upi_transaction_id: '292184299770B049BDF561960F81C650'
+//   },
+//   created_at: 1604573429
+// }
 module.exports = router;
