@@ -136,42 +136,6 @@ router.get("/thanks", async (req, res, next) => {
   Donator.findOne({ payment_id: req.query.payment_id })
     .then((newDonatorCreated) => {
       console.log("added to db successfully");
-      ejs.renderFile(
-        path.join(__dirname, "..", "email", "email.ejs"),
-        function (err, str) {
-          if (err) {
-            console.log(err);
-            return;
-          }
-
-          var mailContent = {
-            name: "Raunakh",
-            email: newDonatorCreated.email,
-            subject: "Thank you for donating!",
-          };
-
-          var mailOptions = {
-            from: "octave.raunakh@gmail.com",
-            to: mailContent.email,
-            subject: mailContent.subject,
-            html: str,
-          };
-
-          transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-              return res.render("error", {
-                error: error,
-                message: "error aagaya bhai!!",
-              });
-            } else {
-              console.log("Email sent: " + info.response);
-              res.redirect("/");
-            }
-          });
-
-          transporter.close();
-        }
-      );
 
       console.log(JSON.stringify(newDonatorCreated));
 
@@ -234,7 +198,46 @@ router.post("/hook", (req, res) => {
 
     newDonator
       .save()
-      .then((savedDonator) => console.log(savedDonator))
+      .then((savedDonator) => {
+        ejs.renderFile(
+          path.join(__dirname, "..", "email", "email.ejs"),
+          function (err, str) {
+            if (err) {
+              console.log(err);
+              return;
+            }
+
+            var mailContent = {
+              name: "Raunakh",
+              email: savedDonator.email,
+              subject: "Thank you for donating!",
+            };
+
+            var mailOptions = {
+              from: "octave.raunakh@gmail.com",
+              to: mailContent.email,
+              subject: mailContent.subject,
+              html: str,
+            };
+
+            transporter.sendMail(mailOptions, function (error, info) {
+              if (error) {
+                return res.render("error", {
+                  error: error,
+                  message: "error aagaya bhai!!",
+                });
+              } else {
+                console.log("Email sent: " + info.response);
+                res.redirect("/");
+              }
+            });
+
+            transporter.close();
+          }
+        );
+
+        return res.status(200).end();
+      })
       .catch((err) => console.log(err));
   }
 
@@ -258,9 +261,18 @@ router.post("/paytm", async (req, res) => {
   });
 
   try {
+    var existingDoner = await Donator.findOne({
+      email: newDonator.email,
+      method: "paytm",
+    });
+
+    if (existingDoner) {
+      return res.redirect("/");
+    }
+
     let savedDonator = await newDonator.save();
     console.log(savedDonator);
-    return res.render('paytm');
+    return res.render("paytm");
   } catch (error) {
     res.redirect("/");
   }
