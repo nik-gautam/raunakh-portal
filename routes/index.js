@@ -260,7 +260,7 @@ router.post("/paytm", async (req, res) => {
   try {
     let savedDonator = await newDonator.save();
     console.log(savedDonator);
-    return res.redirect("/");
+    return res.render('paytm');
   } catch (error) {
     res.redirect("/");
   }

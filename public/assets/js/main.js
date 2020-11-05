@@ -40,6 +40,11 @@
 		}
 	});
 	
+	$('#paytm-button').on('click', function(){
+		$('#paytm-form').hide();
+		$('#paytm-links').show();
+	});
+
 	// meanmenu
 	$('#mobile-menu').meanmenu({
 		meanMenuContainer: '.mobile-menu',
