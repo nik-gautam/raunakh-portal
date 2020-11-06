@@ -94,10 +94,11 @@
             <button data-dismiss="modal" class="close">&times;</button>
             <h4 class="mb-3">Pay with Paytm</h4>
             <form class="paytm-form" action="/paytm" method="POST">
-              <input type="text" name="email" class="username form-control" placeholder="Email"/>
-              <input type="text" name="contact" class="password form-control" placeholder="Phone number"/>
-              <input id="donation-amount-input" type="text" name="amount" class="password form-control" placeholder="Donation Amount"/>
-              <button  id="paytm-button" class="btn" type="submit" value="Donate"><b>Donate <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
+              <input type="email" name="email" class="username form-control" placeholder="Email" required/>
+              <input type="text" name="contact" class="password form-control" placeholder="Phone number" required/>
+              <input id="donation-amount-input" type="text" name="amount" class="password form-control" placeholder="Donation Amount" required/>
+              <button  id="paytm-button" class="btn" type="submit" value="Donate" onclick="return validationDonation()"><b>Donate <i class="fas fa-hand-holding-heart mx-2"></i></b></button>
+              <div id="error-donation"></div>
             </form>
             </div>
           </div>

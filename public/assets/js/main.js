@@ -297,14 +297,7 @@ function validationContact(){
 
 
 function validationDonation(){
-	if(document.getElementById("donation-amount-input").value > 50000){
-		document.getElementById("error-donation").innerHTML = `
-			<div class="error-contact mt-2 mb-4">
-						<p>You cannot donate more than Rs 50k at once.</p>																			
-			</div>`;
-			return false;
-	}
-	else if(document.getElementById("donation-amount-input").value>0){
+	if(document.getElementById("donation-amount-input").value>0){
 		document.getElementById("error-donation").innerHTML = ``;
 		return true;
 	}

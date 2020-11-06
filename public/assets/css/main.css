@@ -4314,7 +4314,7 @@ hr{
 /* ************************** COUNTER ************************** */
 /* ************************************************************* */
 .margin-custom-class{
-  margin-top:150px;
+  margin-top:80px;
 }
 .big-counter-text .desc{
   text-transform: uppercase;
@@ -4436,7 +4436,7 @@ hr{
   color: #d63031;
 }
 /*# Carousel Gallery*/
-.paytm-form input[type= "text"]{
+.paytm-form input[type= "text"], .paytm-form input[type="email"]{
   border: none;
   height: 60px;
   margin-bottom: 10px;
