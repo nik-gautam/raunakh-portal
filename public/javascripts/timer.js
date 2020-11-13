@@ -5,7 +5,7 @@ const finalDate = new Date("November 13,2020 18:00:00").getTime();
     const diff = finalDate - now;
     if(diff < 0){
         clearInterval(x);
-        document.getElementById('timer-heading').innerHTML = "Event has been started <br> <p>Click below to join now</p>";
+        document.getElementById('timer-heading').innerHTML = 'Event Ended<br> <h5 class="white-color mb-4" style="opacity: 0.8;">Donations open till November 19, 2020 </h5>';
         $('.slider-02-text').addClass("margin-custom-class");
         document.getElementById('timer-container').style.display = "none";
         // document.getElementById('if-expired').style.display = "block";
