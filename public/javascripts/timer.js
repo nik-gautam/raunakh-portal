@@ -1,4 +1,4 @@
-const finalDate = new Date("October 21,2021 18:00:00").getTime();
+const finalDate = new Date("October 31,2021 18:00:00").getTime();
  
  timer = () => {
     const now = new Date().getTime();
